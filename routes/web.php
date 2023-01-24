@@ -48,4 +48,7 @@ Route::get('after_login', function () {
     return redirect('test');
 });
 
-Route::get('events', [EventController::class, 'index']);
+Route::view('events', 'events', ['events' => \App\Models\Event::all()]);
+
+Route::view('capacity-building', 'capacity-building');
+Route::view('grantees', 'grantees');

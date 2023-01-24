@@ -33,8 +33,10 @@
     </div>
 </div>
 
+<div class="content-center px-20 w-screen">
+    @yield('content')
 
-@yield('content')
+</div>
 
 
 </body>

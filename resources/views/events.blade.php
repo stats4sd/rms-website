@@ -9,9 +9,8 @@
 
 @section('content')
 
-    <div class="px-20">
-        <h2 class="text-primary text-3xl">RMS Events</h2>
-        We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in many of the events run by the other cross-cutting and regional teams.
+    <h1 class="text-primary text-3xl">RMS Events</h1>
+    We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in many of the events run by the other cross-cutting and regional teams.
     <div
         x-data="{
         calendar: null,
@@ -47,6 +46,5 @@
     }"
     >
         <div x-ref="calendar"></div>
-    </div>
     </div>
 @endsection

@@ -9,7 +9,7 @@ class EventController
 
     public function index()
     {
-        return view('calendar', ['events' => Event::all()]);
+        return view('events', ['events' => Event::all()]);
     }
 
 
