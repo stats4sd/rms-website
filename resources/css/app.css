@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.testing {
+    background-color: hotpink;
+    color: lawngreen;
+}

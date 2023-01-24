@@ -87,9 +87,33 @@ Route::get('test', function () {
         ->get(env('MSGRAPH_ENDPOINT') . '/groups/' . $rmsId . '/calendar')
         ->json();
 
-    $events = \Illuminate\Support\Facades\Http::withToken($token)
+    $eventsFromApi = \Illuminate\Support\Facades\Http::withToken($token)
         ->get(env('MSGRAPH_ENDPOINT') . '/groups/' . $rmsId . '/calendar/events')
-    ->
-    json();
-    ddd($events['value']);
+        ->
+        json();
+
+    ddd($eventsFromApi['value']);
+
+    foreach ($eventsFromApi['value'] as $event) {
+
+        $event = \App\Models\Event::updateOrCreate([
+            'id' => $event['id']
+        ], [
+            'all_day' => $event['isAllDay'] ?? false,
+            'start' => $event['start']['dateTime'],
+            'end' => $event['end']['dateTime'],
+            'title' => $event['subject'],
+            'body' => $event['bodyPreview'],
+        ]);
+
+        // if event is a repeating event, create a repeating event item
+        if($event['recurrence']) {
+
+        }
+    }
+
+    $events = \App\Models\Event::all();
+
+    return view('calendar', ['events' => $events]);
+
 });
