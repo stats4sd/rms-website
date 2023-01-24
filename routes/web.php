@@ -19,13 +19,11 @@ Route::get('login', function () {
 
     return redirect(
         "{$url}?client_id={$client_id}&scope="
-        . urlencode('https://graph.microsoft.com/.default') .
-        "&response_type=code&redirect_uri="
-        . urlencode('https://rms.test/after_login') .
-        "&response_mode=query"
+            . urlencode('https://graph.microsoft.com/.default') .
+            "&response_type=code&redirect_uri="
+            . urlencode('https://rms.test/after_login') .
+            "&response_mode=query"
     );
-
-
 });
 
 Route::get('after_login', function () {
@@ -48,7 +46,7 @@ Route::get('after_login', function () {
     return redirect('test');
 });
 
-Route::view('events', 'events', ['events' => \App\Models\Event::all()]);
+Route::get('events', [EventController::class, 'index']);
 
 Route::view('capacity-building', 'capacity-building');
 Route::view('grantees', 'grantees');
