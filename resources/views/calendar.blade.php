@@ -1,14 +1,19 @@
-<head>
+@extends('layouts.app')
+
+@section('header')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
-</head>
-<body>
 
-<h1 x-data="{ message: 'howdy' }" x-text="message"></h1>
+@endsection
 
-<div
-    x-data="{
+@section('content')
+
+    <div class="px-20">
+        <h2 class="text-primary text-3xl">RMS Events</h2>
+        We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in many of the events run by the other cross-cutting and regional teams.
+    <div
+        x-data="{
         calendar: null,
         events: {{$events->toJson()}},
         newEventTitle: null,
@@ -18,7 +23,7 @@
             this.calendar = new FullCalendar.Calendar(this.$refs.calendar, {
                 events: (info, success) => success(this.events),
                 initialDate: new Date(),
-                initialView: 'dayGridMonth',
+                initialView: 'listYear',
                 selectable: true,
                 unselectAuto: false,
                 editable: false,
@@ -39,11 +44,9 @@
 
             this.calendar.render()
         },
-
     }"
->
-    <div x-ref="calendar"></div>
-
-
-</div>
-</body>
+    >
+        <div x-ref="calendar"></div>
+    </div>
+    </div>
+@endsection

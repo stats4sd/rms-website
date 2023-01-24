@@ -21,14 +21,13 @@ return [
         'scheme' => 'https',
     ],
 
-    'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
-    ],
-
-    'ses' => [
-        'key' => env('AWS_ACCESS_KEY_ID'),
-        'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    'msgraph' => [
+        'client_id' => env('MSGRAPH_CLIENT_ID'),
+        'client_secret' => env('MSGRAPH_CLIENT_SECRET'),
+        'tenant_id' => env('MSGRAPH_TENANT_ID'),
+        'oauth_url' => env('MSGRAPH_OAUTH_URL'),
+        'landing_url' => env('MSGRAPH_LANDING_URL'),
+        'endpoint' => env('MSGRAPH_ENDPOINT'),
     ],
 
 ];

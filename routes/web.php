@@ -1,40 +1,17 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Dcblogdev\MsGraph\Facades\MsGraph;
 use Dcblogdev\MsGraph\Facades\MsGraphAdmin;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('login', function () {
 
     $tenant = env('MSGRAPH_TENANT_ID');
-//    $url = "https://login.microsoftonline.com/{$tenant}/oauth2/v2.0/token";
-
-//    // application level login
-//    $response = \Illuminate\Support\Facades\Http::asForm()->post($url, [
-//        'client_id' => env('MSGRAPH_CLIENT_ID'),
-//        'client_secret' => env('MSGRAPH_SECRET_ID'),
-//        'scope' => 'https://graph.microsoft.com/.default',
-//        'grant_type' => 'client_credentials',
-//        ])->json();
-//
-//    cache()->set('azure_token', $response['access_token']);
-
-    // return redirect('test');
 
     // User Login
     $url = "https://login.microsoftonline.com/{$tenant}/oauth2/v2.0/authorize";
@@ -71,49 +48,4 @@ Route::get('after_login', function () {
     return redirect('test');
 });
 
-Route::get('test', function () {
-
-    $token = cache()->get('azure_token');
-
-    $response = \Illuminate\Support\Facades\Http::withToken($token)
-        ->get(env('MSGRAPH_ENDPOINT') . '/groups')->json();
-
-
-    $group = collect($response['value'])->filter(fn($item) => $item['mail'] === 'caltest@stats4sd.org');
-
-    $rmsId = $group->first()['id'];
-
-    $calendar = \Illuminate\Support\Facades\Http::withToken($token)
-        ->get(env('MSGRAPH_ENDPOINT') . '/groups/' . $rmsId . '/calendar')
-        ->json();
-
-    $eventsFromApi = \Illuminate\Support\Facades\Http::withToken($token)
-        ->get(env('MSGRAPH_ENDPOINT') . '/groups/' . $rmsId . '/calendar/events')
-        ->
-        json();
-
-    ddd($eventsFromApi['value']);
-
-    foreach ($eventsFromApi['value'] as $event) {
-
-        $event = \App\Models\Event::updateOrCreate([
-            'id' => $event['id']
-        ], [
-            'all_day' => $event['isAllDay'] ?? false,
-            'start' => $event['start']['dateTime'],
-            'end' => $event['end']['dateTime'],
-            'title' => $event['subject'],
-            'body' => $event['bodyPreview'],
-        ]);
-
-        // if event is a repeating event, create a repeating event item
-        if($event['recurrence']) {
-
-        }
-    }
-
-    $events = \App\Models\Event::all();
-
-    return view('calendar', ['events' => $events]);
-
-});
+Route::get('events', [EventController::class, 'index']);
