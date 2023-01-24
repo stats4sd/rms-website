@@ -27,6 +27,8 @@ php artisan migrate --seed
 
 ```
 
-**NOTE**: This site uses Vite to compile CSS and JS assets, instead of Laravel Mix. This means that `npm run dev` is now the same as `npm run watch`.
+**NOTE**: This site uses Vite to compile CSS and JS assets, instead of Laravel Mix. This means that:
+ - `npm run dev` is now the same as `npm run watch`.
+ - If you try to load the site locally without running `npm run dev`, you'll get a "Vite manifest not found" error.  
 
 To start working on the front-end, run `npm run dev` in a new terminal tab, then you can open the site (e.g. http://rms-website.test)
