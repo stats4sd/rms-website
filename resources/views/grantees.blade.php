@@ -1,6 +1,62 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="text-primary text-3xl">Support for Grantees</h1>
-@endsection
-ggo
+<div class="top-help bg-cover bg-top bg-no-repeat justify-center flex flex-wrap content-end bg-primary">
+    <div class=" w-full">
+        <div class="text-center">
+            <h1 class="text-white ">Help for Grantees</h1>
+         </div>
+    </div>
+</div>
+<div class="container mx-auto ">
+
+
+<div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">
+
+<p class="px-10 lg:px-0"> Our team has three regional coordinators that form part of the CCRP Regional team. If you would like any support with your own research at any time, please contact the relevant coordinator for your region. They are:
+</p>
+<div class= "text-center w-full xl:w-9/12  mx-auto flex flex-col md:flex-row justify-around items-start mb-16 mt-10">
+       <div class=" w-5/6 sm:w-4/6 mx-auto md:mx-3 md:w-3/12 my-5 "> 
+        <img src="/img/carlos.png" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
+        <p class="font-bold">Carlos Barahona</p>
+        <p>Andes CoP</p>
+        <a href="mailto:c.e.barahona@stats4sd.org" >c.e.barahona@stats4sd.org</a>
+    </div>
+    <div class=" w-5/6 sm:w-4/6 mx-auto md:mx-3 md:w-3/12 my-5 "> 
+        <img src="/img/lucie.jpg" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
+        <p class="font-bold">Lucie Hazelgrove-Planel</p>
+        <p>West Africa CoP</p>
+        <a href="mailto:lucie@idems.international" >lucie@idems.international</a>
+    </div>
+    <div class=" w-5/6 sm:w-4/6 mx-auto md:mx-3 md:w-3/12 my-5 "> 
+        <img src="/img/ric.png" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
+        <p class="font-bold">Ric Coe</p>
+        <p>East and Southern Africa CoP</p>
+        <a href="mailto:r.coe@stats4sd.org" >r.coe@stats4sd.org</a>
+    </div>
+
+</div>
+<div class="block"></div>
+<h3>Get in touch</h3>
+<div class="divider"></div>
+<p> Not sure who to speak to? Use the contact form below to get in touch and we'll put you in contact with a colleague who can help.</p>
+<p class="font-bold  mt-7">Your Name</p>
+<input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs block my-3"  />
+<p class="font-bold mt-5">Your Email</p>
+<input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs block my-3"  />
+<p class="font-bold mt-5">Type your message here</p>
+<textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-full max-w-xl block h-40 my-3"  ></textarea>
+<button class="btn-primary my-5">Send</button>
+
+
+<h3 >How can we help?</h3>
+<div class="divider"></div>
+<p> Our staff h </p>
+</div>
+</div>
+</div>
+</div>
+    
+    
+    @endsection
+

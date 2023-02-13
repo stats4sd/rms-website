@@ -8,3 +8,110 @@
     background-color: hotpink;
     color: lawngreen;
 }
+
+@layer base {
+
+    html {
+        font-family: 'Open Sans', sans-serif;
+    }
+    h1 {
+      @apply text-4xl sm:text-6xl text-primary font-bold mb-6 ;
+    }
+    h2 {
+      @apply text-3xl sm:text-4xl text-primary font-normal my-2;
+    }
+    h3 {
+      @apply text-lg sm:text-xl lg:text-2xl  font-bold mt-5 mb-2;
+    }
+      h4 {
+        @apply text-xl font-bold my-2;
+      }
+    
+    a {
+      @apply text-primary font-semibold;
+    }
+
+  }
+
+  .top-home {
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.877)),url(/public/img/rmsteam.jpg);
+    @apply h-80v md:h-70v px-6 sm:px-8;
+    padding-bottom: 50px;
+    min-height: 650px;
+    max-height: 700px;
+  }
+    @media (min-width: 640px) {
+     .top-home {
+      min-height: 450px !important;
+    }
+  }
+    .top-help {
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/help.jpg);
+      @apply h-50v px-6 sm:px-8;
+      padding-bottom: 50px;
+      min-height: 300px;
+      max-height: 550px;
+    }
+    .top-capacity {
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/capacity.jpg);
+      @apply h-50v px-6 sm:px-8;
+      padding-bottom: 50px;
+      min-height: 300px;
+      max-height: 550px;
+    }
+    .top-events {
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/event2.jpg);
+      @apply h-50v px-6 sm:px-8;
+      padding-bottom: 50px;
+      min-height: 300px;
+      max-height: 550px;
+    }
+      @media (min-width: 640px) {
+       .top-home,.top-help,.top-capacity,.top-events {
+        min-height: 450px !important;
+      }
+
+  }
+
+
+@layer components {
+    .btn-box {
+    @apply py-2 px-4 ml-3 sm:mx-5 mt-8 text-white font-semibold border-2 border-white hover:bg-white hover:bg-opacity-60 hover:text-black transition-all ease-out duration-300 px-6 py-4 self-stretch w-11/12 md:w-3/12;
+    }
+    .btn-box h3 {
+      @apply my-0;
+    }
+    .btn-primary {
+      @apply py-3 px-8  mt-8 text-white bg-primary rounded-xl font-semibold hover:bg-primary-dark transition-all ease-out duration-300 ;
+      }
+
+    .btn-circle {
+      @apply bg-black border-black text-white;
+    }
+.resource-cards h3,.resource-cards p{
+@apply text-white ;
+
+}
+.resource-cards .image-full::before {
+  background-color: transparent;
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 1) 70%);
+  opacity: 80%;
+}
+    .divider {
+      @apply bg-primary;
+      height: .4rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0.7rem;
+      position: relative;
+      width: 60px;
+    
+    }
+
+    /* Countering daisyui's ugly green active state */
+    .menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active), .menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul):active)
+    {
+     background-color: white;
+     color: black;
+    }
+}
+

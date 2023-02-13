@@ -2,16 +2,19 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello RMS</title>
+    <title>RMS for CCRP</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @yield('header')
 
 </head>
-<body data-theme="lemonade" class="h-screen">
+<body data-theme="lemonade" class="">
 
 <div class="navbar bg-base-100">
     <div class="navbar-start">
@@ -26,14 +29,14 @@
             <x-nav-menu tabindex="0"
                         class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"/>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">RMS</a>
+        <a class="btn btn-ghost normal-case text-xl" href="/">RMS</a>
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden lg:flex w-3/6 flex-row-reverse mr-20  ">
         <x-nav-menu/>
     </div>
 </div>
 
-<div class="content-center px-20 w-screen">
+<div class="content-center  w-screen pb-20">
     @yield('content')
 
 </div>

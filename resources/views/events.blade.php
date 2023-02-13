@@ -8,8 +8,19 @@
 @endsection
 
 @section('content')
+<div class="top-events bg-cover bg-center bg-no-repeat justify-center flex flex-wrap content-end bg-primary">
+    <div class=" w-full">
+        <div class="text-center">
+            <h1 class="text-white ">RMS Events</h1>
+            <h2 class="text-white mt-0">Webinars, workshops and more</h2>         
+         </div>
+    </div>
+</div>
+<div class="container mx-auto ">
 
-    <h1 class="text-primary text-3xl">RMS Events</h1>
+
+<div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">
+
     We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in many of the events run by the other cross-cutting and regional teams.
     <div
         x-data="{
@@ -47,4 +58,5 @@
     >
         <div x-ref="calendar"></div>
     </div>
+</div>
 @endsection
