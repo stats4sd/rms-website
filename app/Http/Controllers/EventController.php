@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Services\MSGraphService;
 
 class EventController
 {
@@ -12,10 +13,15 @@ class EventController
         return view('events', ['events' => Event::all()]);
     }
 
-
-    public function update()
+    public function authorise()
     {
-        $token = cache()->get('azure_token');
+        return MSGraphService::authorise();
+    }
+
+    public function updateAllFromApi()
+    {
+        $token = MSGraphService::getToken();
+
         $endpoint = config('services.msgraph.endpoint');
 
         $response = \Illuminate\Support\Facades\Http::withToken($token)
@@ -25,10 +31,6 @@ class EventController
         $group = collect($response['value'])->filter(fn($item) => $item['mail'] === 'caltest@stats4sd.org');
 
         $rmsId = $group->first()['id'];
-
-        $calendar = \Illuminate\Support\Facades\Http::withToken($token)
-            ->get("{$endpoint}/groups/{$rmsId}/calendar")
-            ->json();
 
         $eventsFromApi = \Illuminate\Support\Facades\Http::withToken($token)
             ->get("{$endpoint}/groups/{$rmsId}/calendar/events")
@@ -49,7 +51,7 @@ class EventController
 
         }
 
-        return count($eventsFromApi['value']);
+        return redirect('admin/event');
     }
 
 }
