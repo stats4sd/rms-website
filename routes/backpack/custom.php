@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\EventCrudController;
+use App\Http\Controllers\Admin\FeaturedTroveCrudController;
+use App\Http\Controllers\Admin\SupportRequestCrudController;
+use App\Http\Controllers\Admin\TroveCrudController;
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,13 +19,13 @@ Route::group([
         (array)config('backpack.base.web_middleware', 'web'),
         (array)config('backpack.base.middleware_key', 'admin')
     ),
-    'namespace' => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
-    Route::crud('event', 'EventCrudController');
+    Route::crud('event', EventCrudController::class);
 
     Route::get('authorise', [EventController::class, 'authorise']);
     Route::get('redirect', [EventController::class, 'updateAllFromApi']);
 
-    Route::crud('trove', 'TroveCrudController');
-    Route::crud('featured-trove', 'FeaturedTroveCrudController');
+    Route::crud('trove', TroveCrudController::class);
+    Route::crud('featured-trove', FeaturedTroveCrudController::class);
+    Route::crud('support-request', SupportRequestCrudController::class);
 }); // this should be the absolute last line of this file

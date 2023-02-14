@@ -4,3 +4,5 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('event') }}"><i class="nav-icon la la-question"></i> Events</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('trove') }}"><i class="nav-icon la la-question"></i> Troves</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('featured-trove') }}"><i class="nav-icon la la-question"></i> Featured troves</a></li>
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('support-request') }}"><i class="nav-icon la la-question"></i> Support Requests</a></li>
