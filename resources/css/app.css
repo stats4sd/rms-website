@@ -72,13 +72,13 @@
 
 @layer components {
     .btn-box {
-    @apply py-2 px-4 ml-3 sm:mx-5 mt-8 text-white font-semibold border-2 border-white hover:bg-white hover:bg-opacity-60 hover:text-black transition-all ease-out duration-300 px-6 py-4 self-stretch w-11/12 md:w-3/12;
+      @apply py-2 px-4  text-white font-semibold border-2 border-white hover:bg-white hover:bg-opacity-60 hover:text-black transition-all ease-out duration-300 px-6 py-4 w-full h-full;
     }
     .btn-box h3 {
       @apply my-0;
     }
     .btn-primary {
-      @apply py-3 px-8  mt-8 text-white bg-primary rounded-xl font-semibold hover:bg-primary-dark transition-all ease-out duration-300 ;
+      @apply py-3 px-8  mt-8 text-white bg-primary rounded-md font-semibold hover:bg-primary-dark transition-all ease-out duration-300 ;
       }
 
     .btn-circle {
@@ -86,7 +86,7 @@
     }
 .resource-cards h3,.resource-cards p{
 @apply text-white ;
-
+min-height: 5rem;
 }
 .resource-cards .image-full::before {
   background-color: transparent;
