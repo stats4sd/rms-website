@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Event;
+use App\Models\EventResource;
 use Illuminate\Database\Seeder;
 
 class EventsTableSeeder extends Seeder
@@ -73,6 +75,21 @@ class EventsTableSeeder extends Seeder
                     'url' => NULL,
                 ),
         ));
+
+
+        foreach (Event::all() as $event) {
+            $event->eventResources()
+                ->createMany([
+                    [
+                        'title' => 'Resource 1, maybe a Stats4SD Trove',
+                        'url' => 'https://stats4sd.org/resources/403',
+                    ],
+                    [
+                        'title' => 'Resource 2, maybe a public Dropbox link',
+                        'url' => 'https://www.dropbox.com/sh/n66z620p5jmnegl/AADCow9GNykw8_2i6nEOdAWGa?dl=0'
+                    ]
+                ]);
+        }
 
 
     }

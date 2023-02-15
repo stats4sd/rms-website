@@ -9,19 +9,25 @@
             <p class="pb-4">
                 {{ $event->body }}
             </p>
-            <p class="pb-4">
-                {{ $event->eventType->instructions }}
-            </p>
 
-            <h5>Related Resources</h5>
-            <ul class="pb-4">
 
-                @foreach($event->eventResources as $resource)
-                    <li><a href="{{ $resource->url }}">{{ $resource->title }}</a></li>
-                @endforeach
-            </ul>
+            <div class="card">
+                <div class="card-body">
+                    <h4>Related Resources</h4>
+                    <ul class="pb-4 list-disc">
+
+                        @foreach($event->eventResources as $resource)
+                            <li><a href="{{ $resource->url }}">{{ $resource->title }}</a></li>
+                        @endforeach
+                    </ul>
+
+                </div>
+            </div>
 
             @if(!$isPast)
+                <p class="pb-4">
+                    {{ $event->eventType->joining_instructions }}
+                </p>
                 <a href="{{ $event->register_url }}">Click here to register</a>
             @endif
         </div>
