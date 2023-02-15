@@ -15,9 +15,9 @@
 
 <p class="px-10 lg:px-0"> Our team has three regional coordinators that form part of the CCRP Regional team. If you would like any support with your own research at any time, please contact the relevant coordinator for your region. They are:
 </p>
-<div class= "text-center w-full xl:w-9/12  mx-auto flex flex-col md:flex-row justify-around items-start mb-16 mt-10">
+<div class= "text-center w-full 2xl:w-9/12  mx-auto flex flex-col md:flex-row justify-around items-start mb-16 mt-10">
        <div class=" w-5/6 sm:w-4/6 mx-auto md:mx-3 md:w-3/12 my-5 "> 
-        <img src="/img/carlos.png" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
+        <img src="/img/carlos1.jpg" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
         <p class="font-bold">Carlos Barahona</p>
         <p>Andes CoP</p>
         <a href="mailto:c.e.barahona@stats4sd.org" >c.e.barahona@stats4sd.org</a>
@@ -29,21 +29,27 @@
         <a href="mailto:lucie@idems.international" >lucie@idems.international</a>
     </div>
     <div class=" w-5/6 sm:w-4/6 mx-auto md:mx-3 md:w-3/12 my-5 "> 
-        <img src="/img/ric.png" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
-        <p class="font-bold">Ric Coe</p>
+        <img src="/img/shiphar1.jpg" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
+        <p class="font-bold">Shiphar Mulumba </p>
         <p>East and Southern Africa CoP</p>
-        <a href="mailto:r.coe@stats4sd.org" >r.coe@stats4sd.org</a>
+        <a href="mailto:m.shiphar@stats4sd.org" >m.shiphar@stats4sd.org</a>
     </div>
 
 </div>
-<div class="block"></div>
+<div class=""></div>
 <h3>Get in touch</h3>
 <div class="divider"></div>
 <p> Not sure who to speak to? Use the contact form below to get in touch and we'll put you in contact with a colleague who can help.</p>
-<p class="font-bold  mt-7">Your Name</p>
-<input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs block my-3"  />
+<div class="flex flex-col md:flex-row  items-stretch">
+    <div>
+<p class="font-bold  mt-5">Your Name</p>
+<input type="text" placeholder="Type here" class="input input-bordered   mr-10 my-3"  />
+</div>
+<div>
 <p class="font-bold mt-5">Your Email</p>
-<input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs block my-3"  />
+<input type="text" placeholder="Type here" class="input input-bordered   my-3"  />
+</div>
+</div>
 <p class="font-bold mt-5">Type your message here</p>
 <textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-full max-w-xl block h-40 my-3"  ></textarea>
 <button class="btn-primary my-5">Send</button>

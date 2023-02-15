@@ -10,11 +10,11 @@
             <h2 class="text-white mt-0">for CCRP</h2>
          </div>
     </div>
-    <div class="w-full ">
+    <div class="w-full 2xl:w-5/6 ">
         <div class="text-center container flex flex-col md:flex-row justify-center items-center mx-auto">
-            <button class="btn-box "> <h3>Help for Grantees </h3><p class="font-normal hidden lg:block">Are you a CCRP Grantee in need of Research support? Click here!</p></button>
-            <button class="btn-box "> <h3>Capacity Building </h3><p class="font-normal hidden lg:block">See our growing collection of online resources.</p></button>
-            <button class="btn-box "> <h3>Whats On </h3><p class="font-normal hidden lg:block">We run a series of training courses and webinars throughout the year.</p></button>
+            <div class="ml-3 sm:mx-5 mt-8 self-stretch w-11/12 md:w-3/12"><a href="{{ url('grantees') }}"><button class="btn-box "> <h3>Help for Grantees </h3><p class="font-normal hidden lg:block">Are you a CCRP Grantee in need of Research support? Click here!</p></button></a></div>
+            <div class="ml-3 sm:mx-5 mt-8 self-stretch w-11/12 md:w-3/12"><a href="{{ url('grantees') }}"><a href="{{ url('capacity-building') }}"><button class="btn-box "> <h3>Capacity Building </h3><p class="font-normal hidden lg:block">See our growing collection of online resources.</p></button></a></div>
+            <div class="ml-3 sm:mx-5 mt-8 self-stretch w-11/12 md:w-3/12"><a href="{{ url('grantees') }}"><a href="{{ url('events') }}"><button class="btn-box "> <h3>Whats On </h3><p class="font-normal hidden lg:block">We run a series of training courses and webinars throughout the year.</p></button></a></div>
         </div>
     </div>
 </div>
