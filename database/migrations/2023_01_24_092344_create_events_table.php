@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->string('id')->prinary();
+            $table->foreignId('event_type_id');
             $table->boolean('all_day')->default(0);
             $table->dateTime('start');
             $table->dateTime('end');

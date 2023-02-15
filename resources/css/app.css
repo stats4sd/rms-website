@@ -1,13 +1,9 @@
+@import '../../vendor/filament/forms/dist/module.esm.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-.testing {
-    background-color: hotpink;
-    color: lawngreen;
-}
 
 @layer base {
 
@@ -26,7 +22,7 @@
       h4 {
         @apply text-xl font-bold my-2;
       }
-    
+
     a {
       @apply text-primary font-semibold;
     }
@@ -104,7 +100,7 @@
       margin-top: 0.7rem;
       position: relative;
       width: 60px;
-    
+
     }
 
     /* Countering daisyui's ugly green active state */

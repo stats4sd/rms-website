@@ -3,32 +3,38 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Services\MSGraphService;
+use Carbon\Carbon;
 
 class EventController
 {
 
     public function index()
     {
-        return view('events', ['events' => Event::all()]);
+        return view('events', [
+            'events' => Event::where('start', '>', (new Carbon)->toDateString())->get(),
+            'pastEvents' => Event::where('start', '<', (new Carbon)->toDateString())->get(),
+        ]);
     }
 
-
-    public function update()
+    public function authorise()
     {
-        $token = cache()->get('azure_token');
+        return MSGraphService::authorise();
+    }
+
+    public function updateAllFromApi()
+    {
+        $token = MSGraphService::getToken();
+
         $endpoint = config('services.msgraph.endpoint');
 
         $response = \Illuminate\Support\Facades\Http::withToken($token)
-            ->get( "{$endpoint}/groups")->json();
+            ->get("{$endpoint}/groups")->json();
 
 
         $group = collect($response['value'])->filter(fn($item) => $item['mail'] === 'caltest@stats4sd.org');
 
         $rmsId = $group->first()['id'];
-
-        $calendar = \Illuminate\Support\Facades\Http::withToken($token)
-            ->get("{$endpoint}/groups/{$rmsId}/calendar")
-            ->json();
 
         $eventsFromApi = \Illuminate\Support\Facades\Http::withToken($token)
             ->get("{$endpoint}/groups/{$rmsId}/calendar/events")
@@ -49,7 +55,7 @@ class EventController
 
         }
 
-        return count($eventsFromApi['value']);
+        return redirect('admin/event');
     }
 
 }

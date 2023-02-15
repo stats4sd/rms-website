@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,5 +17,8 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call(EventsTableSeeder::class);
+        $user = User::factory()->create(['name' => 'Local Tester', 'email' => 'test@example.com']);
+
+
     }
 }
