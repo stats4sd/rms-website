@@ -10,7 +10,8 @@
 
 
         <div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">
-
+        <h3>Get in touch</h3>
+            <div class="divider"></div>
             <p class="px-10 lg:px-0"> Our team has three regional coordinators that form part of the CCRP Regional team.
                 If you would like any support with your own research at any time, please contact the relevant
                 coordinator for your region. They are:
@@ -38,8 +39,7 @@
 
             </div>
             <div class="block"></div>
-            <h3>Get in touch</h3>
-            <div class="divider"></div>
+
             <p> Not sure who to speak to? Use the contact form below to get in touch and we'll put you in contact with a
                 colleague who can help.</p>
 

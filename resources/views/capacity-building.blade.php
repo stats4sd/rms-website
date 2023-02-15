@@ -68,7 +68,7 @@
             </a>
 
 
-            <h3>Upcoming Courses</h3>
+            <h3>Courses and workshops</h3>
             <div class="divider"></div>
 
             <p class="mb-10">RMS frequently organises workshops, seminars and training events. The majority of these are held online, usually with live translation between English, French and Spanish available. Our <a href="{{ url('events') }}">events page</a> contains details and links to register for upcoming events. 
