@@ -1,5 +1,5 @@
-<div class="card bg-base-100 shadow-md">
-    <div tabindex="0" class="collapse collapse-arrow border border-base-300">
+<div class="card bg-base-100 shadow-md rounded-none border border-base-300">
+    <div tabindex="0" class="collapse collapse-arrow ">
 
         <h4 class="collapse-title card-title font-light">
             
