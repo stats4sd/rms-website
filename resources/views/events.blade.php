@@ -20,41 +20,19 @@
 
             We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in
             many of the events run by the other cross-cutting and regional teams.
-            <div
-                x-data="{
-        calendar: null,
-        events: {{$events->toJson()}},
-        newEventTitle: null,
-        newEventStart: null,
-        newEventEnd: null,
-        init() {
-            this.calendar = new FullCalendar.Calendar(this.$refs.calendar, {
-                events: (info, success) => success(this.events),
-                initialDate: new Date(),
-                initialView: 'listYear',
-                selectable: true,
-                unselectAuto: false,
-                editable: false,
-                select: (info) => {
-                    this.newEventStart = info.startStr
-                    this.newEventEnd = info.endStr
-                },
-                headerToolbar: {
-                    start: '',
-                    center: '',
-                    end: 'dayGridMonth listYear today prev,next',
-                },
-                buttonText: {
-                    dayGridMonth: 'Show Month Grid',
-                    listYear: 'Show list of events',
-                }
-            })
 
-            this.calendar.render()
-        },
-    }"
-            >
-                <div x-ref="calendar"></div>
-            </div>
+            <h3>Upcoming Events</h3>
+            <div class="divider"></div>
+
+            @foreach($events as $event)
+                <x-event-display :event="$event"/>
+            @endforeach
+            <h3>Past Events</h3>
+            <div class="divider"></div>
+
+            @foreach($pastEvents as $event)
+                <x-event-display :event="$event" :isPast="true"/>
+            @endforeach
         </div>
+    </div>
 </x-layouts.app>

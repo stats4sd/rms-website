@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
-            $table->string('id')->prinary();
-            $table->foreignId('event_type_id');
-            $table->boolean('all_day')->default(0);
-            $table->dateTime('start');
-            $table->dateTime('end');
+        Schema::create('event_resources', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('event_id');
             $table->string('title');
-            $table->text('body')->nullable();
-            $table->string('url')->nullable();
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('event_resources');
     }
 };

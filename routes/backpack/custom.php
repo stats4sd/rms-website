@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\EventCrudController;
+use App\Http\Controllers\Admin\EventResourceCrudController;
+use App\Http\Controllers\Admin\EventTypeCrudController;
 use App\Http\Controllers\Admin\FeaturedTroveCrudController;
 use App\Http\Controllers\Admin\SupportRequestCrudController;
 use App\Http\Controllers\Admin\TroveCrudController;
@@ -28,4 +30,6 @@ Route::group([
     Route::crud('trove', TroveCrudController::class);
     Route::crud('featured-trove', FeaturedTroveCrudController::class);
     Route::crud('support-request', SupportRequestCrudController::class);
+    Route::crud('event-type', EventTypeCrudController::class);
+    Route::crud('event-resource', EventResourceCrudController::class);
 }); // this should be the absolute last line of this file

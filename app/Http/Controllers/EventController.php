@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Services\MSGraphService;
+use Carbon\Carbon;
 
 class EventController
 {
 
     public function index()
     {
-        return view('events', ['events' => Event::all()]);
+        return view('events', [
+            'events' => Event::where('start', '>', (new Carbon)->toDateString())->get(),
+            'pastEvents' => Event::where('start', '<', (new Carbon)->toDateString())->get(),
+        ]);
     }
 
     public function authorise()
@@ -25,7 +29,7 @@ class EventController
         $endpoint = config('services.msgraph.endpoint');
 
         $response = \Illuminate\Support\Facades\Http::withToken($token)
-            ->get( "{$endpoint}/groups")->json();
+            ->get("{$endpoint}/groups")->json();
 
 
         $group = collect($response['value'])->filter(fn($item) => $item['mail'] === 'caltest@stats4sd.org');

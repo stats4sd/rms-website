@@ -6,3 +6,6 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('featured-trove') }}"><i class="nav-icon la la-question"></i> Featured troves</a></li>
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('support-request') }}"><i class="nav-icon la la-question"></i> Support Requests</a></li>
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('event-type') }}"><i class="nav-icon la la-question"></i> Event types</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('event-resource') }}"><i class="nav-icon la la-question"></i> Event resources</a></li>
