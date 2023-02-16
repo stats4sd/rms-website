@@ -74,7 +74,7 @@
             <p class="mb-10">RMS frequently organises workshops, seminars and training events. The majority of these are held online, usually with live translation between English, French and Spanish available. Our <a href="{{ url('events') }}">events page</a> contains details and links to register for upcoming events. 
 </p>
 <a href="{{ url('events') }}"><button class="btn-primary block mx-auto">See upcoming events</button></a>
-
+<!-- 
 <p class="mt-10 mb-5">Along with other one-off events, we are also running two series of regular webinars in 2023:   
 </p>
 
@@ -88,6 +88,6 @@
 <p>Monthly FRN sessions alternate between having a practical agroecological focus and going into detail on relevant research methods topics. Contributions are led by grantees or other external speakers involved with FRNs. 
 
 </p>
-</div>
+</div> -->
 </div>
 </x-layouts.app>

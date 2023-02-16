@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto ">
+    <div class="container mx-auto px-10">
 
 
         <div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">

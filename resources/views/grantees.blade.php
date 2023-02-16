@@ -9,10 +9,85 @@
     <div class="container mx-auto ">
 
 
-        <div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">
-        <h3>Get in touch</h3>
+        <div class="lg:w-5/6 mx-auto mt-16 px-10">
+        <p class="headline"> RMS is constantly looking for opportunities to work with our partners at CCRP to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”.
+</p>    
+        <h3>How can we help?</h3>
+            <div class="divider mb-10"></div>
+            <div class="mx-auto w-full xl:w-5/6  md:text-center grid md:grid-cols-3 ">
+                <div class="w-full mb-4 sm:mb-10 flex items-center md:block sm:px-2 2xl:px-5">
+                    <img src="img/talkicon.png" class="md:px-20  2xl:px-24 mr-6 md:mx-auto md:mb-5 w-14 md:w-full">
+                    <div class="grid grid-rows">
+                        <div>
+                    
+                            <b>Let's talk</b>
+                        </div>
+                        <div> 
+                            <p>We can arrange discussions through zoom or email at any time, and in-person meetings where appropriate.</p></div>
+                        </div>
+                 </div>
+                 <div class="w-full mb-4 sm:mb-10 flex items-center md:block  sm:px-2 2xl:px-5">
+                    <img src="img/pplicon.png" class="md:px-20 2xl:px-24 mr-6 md:mx-auto md:mb-5 w-14 md:w-full">
+                    <div class="grid grid-rows">
+                        <div>
+                    
+                            <b>Get our input</b>
+                        </div>
+                        <div> 
+                            <p>Invite us to your inception, design, progress or analysis meetings.</p></div>
+                        </div>
+                 </div>
+                 <div class="w-full mb-4 sm:mb-10 flex items-center md:block sm:px-2 2xl:px-5">
+                    <img src="img/yticon.png" class="md:px-20 2xl:px-24 mr-6 md:mx-auto md:mb-5 w-14 md:w-full">
+                    <div class="grid grid-rows">
+                        <div>
+                    
+                            <b>Capacity Building</b>
+                        </div>
+                        <div> 
+                            <p>We also offer online <a href="{{ url('capacity-building') }}">resources and events</a> to support capacity-building. </p></div>
+                        </div>
+                 </div>
+</div>
+
+<a href="#getintouch">
+                <button class="btn-primary block mx-auto mt-4 mb-20">Contact the team</button>
+            </a>
+</div>
+                 <div class="container lg:w-11/12 2xl:w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-5 lg:pr-5">
+                    <div class="lg:col-span-2 my-3">
+                        <div class="supportimg">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 pt-4  px-10">
+                        <div class="mb-5">
+                            <h3>We work:</h3>
+                            <p class="font-bold mt-6">At all levels: </p>
+                            <p>From providing individual project support and developing students’ research skills to working with the leadership team to help develop the program’s long-term strategies. </p>
+                            <p class="font-bold mt-5">In multiple languages: </p>
+                            <p>English, Spanish, French and Swahili. </p>
+                            <p class="font-bold mt-5">Across all CCRP regions: </p>
+                            <p>East & Southern Africa, West Africa and the Andes. </p>
+                            <p class="font-bold mt-5">Advocating mixed methods:</p>
+                            <p>Our team includes research design specialists, statisticians, qualitative researchers and data engineers. </p>
+
+
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="lg:w-5/6 mx-auto mt-16 px-10">
+
+
+
+        
+
+        <h3 id="getintouch">Get in touch</h3>
             <div class="divider"></div>
-            <p class="px-10 lg:px-0"> Our team has three regional coordinators that form part of the CCRP Regional team.
+            <p > Our team has three regional coordinators that form part of the CCRP Regional team.
                 If you would like any support with your own research at any time, please contact the relevant
                 coordinator for your region. They are:
             </p>
@@ -45,9 +120,7 @@
 
             <livewire:contact-form></livewire:contact-form>
 
-            <h3>How can we help?</h3>
-            <div class="divider"></div>
-            <p> Our staff h </p>
+           
         </div>
     </div>
 

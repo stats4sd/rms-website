@@ -17,7 +17,7 @@
       @apply text-3xl sm:text-4xl text-primary font-normal my-2;
     }
     h3 {
-      @apply text-lg sm:text-xl lg:text-2xl  font-bold mt-5 mb-2;
+      @apply text-2xl  font-bold mt-5 mb-2;
     }
       h4 {
         @apply text-xl font-bold my-2;
@@ -26,11 +26,14 @@
     a {
       @apply text-primary font-semibold;
     }
+    .headline {
+      @apply font-light text-2xl mt-12 mb-16 text-gray-500;
+    }
 
   }
 
   .top-home {
-    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.877)),url(/public/img/rmsteam.jpg);
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.47)),url(/public/img/banner3.png);
     @apply h-80v md:h-70v px-6 sm:px-8;
     padding-bottom: 50px;
     min-height: 650px;
@@ -42,7 +45,8 @@
     }
   }
     .top-help {
-      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/help.jpg);
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/help2.jpg);
+      background-position: center;
       @apply h-50v px-6 sm:px-8;
       padding-bottom: 50px;
       min-height: 300px;
@@ -69,6 +73,17 @@
 
   }
 
+.supportimg {
+  background-image: linear-gradient(180deg,hsla(0,0%,100%,0),rgba(0,0,0,.3)),url(/public/img/wedodata.jpg);
+  background-position: center%;
+  background-size: cover;
+  min-height: 500px;
+  width: 100%;
+
+}
+.event {
+  border-bottom: 1px solid #dce0e4;  
+}
 
 @layer components {
     .btn-box {
