@@ -14,14 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->string('id')->prinary();
+            $table->id('id');
+            $table->string('azure_id')->nullable();
             $table->foreignId('event_type_id');
             $table->boolean('all_day')->default(0);
             $table->dateTime('start');
             $table->dateTime('end');
             $table->string('title');
             $table->text('body')->nullable();
-            $table->string('url')->nullable();
+            $table->text('joining_instructions')->nullable();
+            $table->string('registration_url')->nullable();
             $table->timestamps();
         });
     }

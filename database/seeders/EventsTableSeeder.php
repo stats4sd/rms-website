@@ -22,12 +22,12 @@ class EventsTableSeeder extends Seeder
             [
                 'name' => 'Seminar',
                 'joining_instructions' => 'Our seminars are open to everyone. To receive the invitation link, please register for our events mailing list.',
-                'register_url' => 'https://this-is-our-joining-url',
+                'registration_url' => 'https://this-is-our-joining-url',
             ],
             [
                 'name' => 'Open Online Course',
                 'joining_instructions' => 'This online course is run through our Moodle site and is open to anyone to register. Please use the link below to enroll.',
-                'register_url' => 'https://this-is-our-joining-url',
+                'registration_url' => 'https://this-is-our-joining-url',
             ]
         ]);
 
@@ -42,11 +42,10 @@ class EventsTableSeeder extends Seeder
                     'body' => 'This is our Monday morning exciting meeting / event / thing.',
                     'created_at' => '2023-01-24 09:35:16',
                     'end' => '2023-02-06 10:50:00',
-                    'id' => 'AQMkAGE1NGMwOTZjLWM4Y2UtNGE0OC1hZGU2LWNkMzViMjRkZmIyZgBGAAADIdvR4KNFzE6Nmqh0T9YiFwcAu7VYT1jJQkasO3tDsHnJaAAAAgENAAAAu7VYT1jJQkasO3tDsHnJaAAAAWK8IQAAAA==',
                     'start' => '2023-02-06 10:00:00',
                     'title' => 'Recurring Test Event',
                     'updated_at' => '2023-01-24 09:35:16',
-                    'url' => NULL,
+                    'registration_url' => NULL,
                 ),
             1 =>
                 array(
@@ -55,11 +54,10 @@ class EventsTableSeeder extends Seeder
                     'body' => 'This is a description of the event. It\'s going to be fun.',
                     'created_at' => '2023-01-24 09:35:16',
                     'end' => '2023-02-01 11:50:00',
-                    'id' => 'AQMkAGE1NGMwOTZjLWM4Y2UtNGE0OC1hZGU2LWNkMzViMjRkZmIyZgBGAAADIdvR4KNFzE6Nmqh0T9YiFwcAu7VYT1jJQkasO3tDsHnJaAAAAgENAAAAu7VYT1jJQkasO3tDsHnJaAAAAWK8IAAAAA==',
                     'start' => '2023-02-01 09:30:00',
                     'title' => 'Test Event 3',
                     'updated_at' => '2023-01-24 09:35:16',
-                    'url' => NULL,
+                    'registration_url' => NULL,
                 ),
             2 =>
                 array(
@@ -68,11 +66,10 @@ class EventsTableSeeder extends Seeder
                     'body' => 'Test Of the future!',
                     'created_at' => '2023-01-24 09:35:16',
                     'end' => '2023-03-24 10:55:00',
-                    'id' => 'AQMkAGE1NGMwOTZjLWM4Y2UtNGE0OC1hZGU2LWNkMzViMjRkZmIyZgBGAAADIdvR4KNFzE6Nmqh0T9YiFwcAu7VYT1jJQkasO3tDsHnJaAAAAgENAAAAu7VYT1jJQkasO3tDsHnJaAAAAWK8HwAAAA==',
-                    'start' => '2023-03-24 10:30:00',
+                        'start' => '2023-03-24 10:30:00',
                     'title' => 'Test Event',
                     'updated_at' => '2023-01-24 09:35:16',
-                    'url' => NULL,
+                    'registration_url' => NULL,
                 ),
         ));
 

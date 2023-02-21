@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\FeaturedTroveCrudController;
 use App\Http\Controllers\Admin\SupportRequestCrudController;
 use App\Http\Controllers\Admin\TroveCrudController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventTypeController;
 use Illuminate\Support\Facades\Route;
 
 // --------------------------
@@ -28,8 +29,11 @@ Route::group([
     Route::get('redirect', [EventController::class, 'updateAllFromApi']);
 
     Route::crud('trove', TroveCrudController::class);
-    Route::crud('featured-trove', FeaturedTroveCrudController::class);
     Route::crud('support-request', SupportRequestCrudController::class);
     Route::crud('event-type', EventTypeCrudController::class);
     Route::crud('event-resource', EventResourceCrudController::class);
+
+
+    Route::get('event_types/{eventtype}/joining-instructions', [EventTypeController::class, 'getJoiningInstructions']);
+
 }); // this should be the absolute last line of this file

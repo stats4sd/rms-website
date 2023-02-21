@@ -20,7 +20,7 @@ class FeaturedTrove extends Model
 
     public function trove()
     {
-        return $this->belongsTo(Trove::class);
+        return $this->setConnection('trove_mysql')->belongsTo(Trove::class);
     }
 
     public function getTroveDataAttribute()
@@ -31,7 +31,8 @@ class FeaturedTrove extends Model
 
     public function getTroveCoverImageAttribute()
     {
-        return collect($this->trove_data['cover_image'])->first()['original_url'];
+
+        return collect($this->trove_data['cover_image'])->first()['original_url'] ?? '';
     }
 
 }

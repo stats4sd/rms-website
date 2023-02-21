@@ -39,6 +39,12 @@ class EventResourceCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::setValidation([
+            'event' => 'required',
+            'name' => 'required',
+            'url' => 'required|url',
+        ]);
+
         CRUD::column('event')
             ->type('relationship')
             ->attribute('title');
