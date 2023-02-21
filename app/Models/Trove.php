@@ -21,6 +21,10 @@ class Trove extends Model
     |--------------------------------------------------------------------------
     */
 
+
+    // This model is linked to a different database.
+    // This platform is intended to be installed in the same server as the main Stats4SD resources database, and so can access that database directly to retrieve the list of troves.
+
     protected $table = 'troves';
     protected $connection = 'trove_mysql';
 
@@ -28,12 +32,18 @@ class Trove extends Model
         'title',
     ];
 
+    public function __construct(array $attributes = [])
+    {
+        $this->table = config('database.connections.trove_mysql.database').'.'.$this->table;
+        parent::__construct($attributes);
+    }
+
     protected $fillable = ['featured'];
     protected $guarded = ['id'];
 
     public function featuredTrove()
     {
-        return $this->hasOne(FeaturedTrove::class);
+        return $this->setConnection('mysql')->hasOne(FeaturedTrove::class, 'trove_id', 'id');
     }
 
     public function getFeaturedAttribute()

@@ -9,6 +9,8 @@ class EventResource extends Model
 {
     use CrudTrait;
 
+    protected $guarded = [];
+
     public function event()
     {
         return $this->belongsTo(Event::class);
