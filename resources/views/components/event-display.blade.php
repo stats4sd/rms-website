@@ -7,7 +7,7 @@
         </h4>
         <div class="collapse-content">
             <p class="pb-4">
-                {{ $event->body }}
+                {!! $event->body !!}
             </p>
 
 

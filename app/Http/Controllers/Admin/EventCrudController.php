@@ -68,7 +68,14 @@ class EventCrudController extends CrudController
         CRUD::field('title')->label('Event title');
         CRUD::field('eventType')
             ->type('relationship');
-        CRUD::field('body')->label('Event Details');
+        CRUD::field('body')
+            ->label('Event Details')
+            ->type('tinymce')
+            ->options([
+                'menubar' => '',
+                'plugins' => 'lists',
+                'toolbar' => 'undo redo | styleselect | bold italic underline | bullist numlist | alignleft aligncenter alignright alignjustify | outdent indent',
+            ]);
         CRUD::field('start')->label('Start time and date')->type('datetime_picker');
         CRUD::field('end')->label('End time and date')->type('datetime_picker');;
 
