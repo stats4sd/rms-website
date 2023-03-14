@@ -66,6 +66,21 @@
             <a href="{{ config('app.resources_site_url')}}/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP">
                 <button class="btn-primary block mx-auto">View all RMS Resources</button>
             </a>
+            
+<div class="grid-cols-1 lg:flex lg:flex-row  lg:justify-between items-center my-10 ">
+
+  <div class="lg:mx-8 lg:pr-5 mx-auto pt-5 lg:pt-0">
+  <h4 class=" my-4">Youtube Channel</h4>
+    Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful walkthroughs, and reflections on the research process. 
+    <a href="https://www.youtube.com/@Stats4SD">
+                <button class="btn-primary block mx-auto mb-10">View YouTube Channel</button>
+            </a>
+
+  </div>
+  <div >
+  <iframe class=" mx-auto " width="560" height="315" src="https://www.youtube.com/embed/mXwTomEpHvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
 
 
             <h3>Courses and workshops</h3>

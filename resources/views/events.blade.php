@@ -27,7 +27,7 @@
             @foreach($events as $event)
                 <x-event-display :event="$event"/>
             @endforeach
-            <h3>Past Events</h3>
+            <h3 class="mt-10">Past Events</h3>
             <div class="divider"></div>
 
             @foreach($pastEvents as $event)

@@ -7,17 +7,18 @@
 
 @layer base {
 
+
     html {
         font-family: 'Open Sans', sans-serif;
     }
     h1 {
-      @apply text-4xl sm:text-6xl text-primary font-bold mb-6 ;
+      @apply text-3xl sm:text-5xl text-primary font-bold mb-6 ;
     }
     h2 {
-      @apply text-3xl sm:text-4xl text-primary font-normal my-2;
+      @apply text-2xl sm:text-4xl text-primary font-normal my-2;
     }
     h3 {
-      @apply text-2xl  font-bold mt-5 mb-2;
+      @apply text-2xl font-bold mt-5 mb-2;
     }
       h4 {
         @apply text-xl font-bold my-2;
@@ -33,20 +34,22 @@
   }
 
   .top-home {
-    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.47)),url(/public/img/banner3.png);
-    @apply h-80v md:h-70v px-6 sm:px-8;
+    background-image: linear-gradient(90deg,#182b29,#0b1616);
+    @apply h-50v md:h-30v px-6 sm:px-8;
+    
+    background-position: top;
     padding-bottom: 50px;
-    min-height: 650px;
+    min-height: 280px;
     max-height: 700px;
   }
-    @media (min-width: 640px) {
+    /* @media (min-width: 640px) {
      .top-home {
       min-height: 450px !important;
     }
-  }
+  } */
     .top-help {
-      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/help2.jpg);
-      background-position: center;
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5)),url(/public/img/helpbox.jpg);
+      background-position: top;
       @apply h-50v px-6 sm:px-8;
       padding-bottom: 50px;
       min-height: 300px;
@@ -60,14 +63,14 @@
       max-height: 550px;
     }
     .top-events {
-      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/event2.jpg);
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)),url(/public/img/eventsbox.jpg);
       @apply h-50v px-6 sm:px-8;
       padding-bottom: 50px;
       min-height: 300px;
       max-height: 550px;
     }
       @media (min-width: 640px) {
-       .top-home,.top-help,.top-capacity,.top-events {
+       .top-help,.top-capacity,.top-events {
         min-height: 450px !important;
       }
 
@@ -75,7 +78,7 @@
 
 .supportimg {
   background-image: linear-gradient(180deg,hsla(0,0%,100%,0),rgba(0,0,0,.3)),url(/public/img/wedodata.jpg);
-  background-position: center%;
+  background-position: center;
   background-size: cover;
   min-height: 500px;
   width: 100%;
@@ -87,8 +90,11 @@
 
 @layer components {
     .btn-box {
-      @apply py-2 px-4  text-white font-semibold border-2 border-white hover:bg-white hover:bg-opacity-60 hover:text-black transition-all ease-out duration-300 px-6 py-4 w-full h-full;
+      @apply py-2 px-4  text-white font-semibold bg-primary hover:bg-white hover:bg-primary-dark  transition-all ease-out duration-300 px-6 py-4 w-full h-full;
     }
+    /* .btn-box {
+      @apply py-2 px-4  text-white font-semibold border-2 border-white hover:bg-white hover:bg-opacity-60 hover:text-black transition-all ease-out duration-300 px-6 py-4 w-full h-full;
+    } */
     .btn-box h3 {
       @apply my-0;
     }
@@ -117,6 +123,42 @@ min-height: 5rem;
       width: 60px;
 
     }
+.callboxes .image-full::before {
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.6)) !important;
+}
+.callboxes .card-body p{
+  min-height: 0rem !important;
+  }
+
+  .callboxes figure img{
+    height: auto !important;
+  
+  }
+
+    /* #grantees {
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/helpbox.jpg);
+      background-position: top;
+      background-size: 1600px;
+    }
+    #capacity {
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/capacity.jpg);
+      background-position: top left;
+      background-size: 1000px;
+    }
+    #events {
+      background-image: linear-gradient(180deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616)),url(/public/img/eventsbox.jpg);
+      background-position: left center;
+      background-size: 900px;
+    }
+    @media (min-width: 900px) {
+      #grantees,#capacity,#events {
+     
+      background-size: cover;
+    }
+
+  } */
+
+
 
     /* Countering daisyui's ugly green active state */
     .menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active), .menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul):active)
