@@ -27,12 +27,12 @@
 
                 @foreach($featuredTroves as $trove)
                     @if($trove->trove_data)
-                        <div class="card  lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
+                        <div class="card lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
                             <figure><img src="{{ $trove->trove_cover_image }}"
                                          alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
                             <div class="card-body  self-end mt-10">
                                 <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
-                                <p>{!! Str::limit($trove->trove_data['description'], 100, '...') !!}</p>
+                                {!! Str::limit($trove->trove_data['description']) !!}
 
                             </div>
                             <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
