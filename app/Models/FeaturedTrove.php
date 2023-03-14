@@ -16,6 +16,10 @@ class FeaturedTrove extends Model
     protected $guarded = [];
     protected $connection = 'mysql';
 
+    protected $casts = [
+        'trove_data' => 'array',
+    ];
+
     protected $appends = ['trove_data', 'trove_cover_image'];
 
 
@@ -27,7 +31,7 @@ class FeaturedTrove extends Model
     public function getTroveDataAttribute($value)
     {
 
-        if (!$value) {
+        if (!$value or $value === []) {
 
             try {
                 $data = Http::get(config('app.resources_site_url') . '/api/troves/' . $this->trove_id)
@@ -36,13 +40,30 @@ class FeaturedTrove extends Model
 
                     $this->trove_data = $data;
                     $this->save();
+
+                    // save cover image locally;
+
+                    if($this->getTroveCoverImageAttribute() !== '') {
+                        $image = file_get_contents($this->getTroveCoverImageAttribute());
+                        $name = Str::afterLast($this->getTroveCoverImageAttribute(), '/');
+                        $name = Str::beforeLast($name, '?');
+
+                        Storage::put($name, $image);
+
+                        $this->cover_image = $name;
+                        $this->save();
+                    }
+
+
             } catch (Exception $exception) {
+
+
                 return [];
             }
 
         }
 
-        return $value;
+        return json_decode($value, true);
     }
 
     public function getTroveCoverImageAttribute()
