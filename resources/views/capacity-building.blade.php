@@ -26,18 +26,20 @@
                 class="text-left w-full resource-cards  mx-auto flex flex-col lg:flex-row justify-between items-stretch mb-8 mt-10">
 
                 @foreach($featuredTroves as $trove)
-                    <div class="card  lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
-                        <figure><img src="{{ $trove->trove_cover_image }}"
-                                     alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
-                        <div class="card-body  self-end mt-10">
-                            <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
-                            <p>{!! Str::limit($trove->trove_data['description'], 100, '...') !!}</p>
+                    @if($trove->trove_data)
+                        <div class="card  lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
+                            <figure><img src="{{ $trove->trove_cover_image }}"
+                                         alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
+                            <div class="card-body  self-end mt-10">
+                                <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
+                                <p>{!! Str::limit($trove->trove_data['description'], 100, '...') !!}</p>
 
+                            </div>
+                            <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
+                               href="{{ config('app.resources_site_url') . '/resources/' . $trove->trove_data['slug'] }}"
+                               target="blank"> </a>
                         </div>
-                        <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
-                           href="{{ config('app.resources_site_url') . '/resources/' . $trove->trove_data['slug'] }}"
-                           target="blank"> </a>
-                    </div>
+                    @endif
 
                 @endforeach
 
@@ -62,47 +64,55 @@
             </div>
 
 
-
             <a href="{{ config('app.resources_site_url')}}/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP">
                 <button class="btn-primary block mx-auto">View all RMS Resources</button>
             </a>
-            
-<div class="grid-cols-1 lg:flex lg:flex-row  lg:justify-between items-center my-10 ">
 
-  <div class="lg:mx-8 lg:pr-5 mx-auto pt-5 lg:pt-0">
-  <h4 class=" my-4">Youtube Channel</h4>
-    Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful walkthroughs, and reflections on the research process. 
-    <a href="https://www.youtube.com/@Stats4SD">
-                <button class="btn-primary block mx-auto mb-10">View YouTube Channel</button>
-            </a>
+            <div class="grid-cols-1 lg:flex lg:flex-row  lg:justify-between items-center my-10 ">
 
-  </div>
-  <div >
-  <iframe class=" mx-auto " width="560" height="315" src="https://www.youtube.com/embed/mXwTomEpHvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-</div>
+                <div class="lg:mx-8 lg:pr-5 mx-auto pt-5 lg:pt-0">
+                    <h4 class=" my-4">Youtube Channel</h4>
+                    Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful
+                    walkthroughs, and reflections on the research process.
+                    <a href="https://www.youtube.com/@Stats4SD">
+                        <button class="btn-primary block mx-auto mb-10">View YouTube Channel</button>
+                    </a>
+
+                </div>
+                <div>
+                    <iframe class=" mx-auto " width="560" height="315" src="https://www.youtube.com/embed/mXwTomEpHvc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
 
 
             <h3>Courses and workshops</h3>
             <div class="divider"></div>
 
-            <p class="mb-10">RMS frequently organises workshops, seminars and training events. The majority of these are held online, usually with live translation between English, French and Spanish available. Our <a href="{{ url('events') }}">events page</a> contains details and links to register for upcoming events. 
-</p>
-<a href="{{ url('events') }}"><button class="btn-primary block mx-auto">See upcoming events</button></a>
-<!-- 
-<p class="mt-10 mb-5">Along with other one-off events, we are also running two series of regular webinars in 2023:   
-</p>
+            <p class="mb-10">RMS frequently organises workshops, seminars and training events. The majority of these are
+                held online, usually with live translation between English, French and Spanish available. Our <a
+                    href="{{ url('events') }}">events page</a> contains details and links to register for upcoming
+                events.
+            </p>
+            <a href="{{ url('events') }}">
+                <button class="btn-primary block mx-auto">See upcoming events</button>
+            </a>
+            <!--
+            <p class="mt-10 mb-5">Along with other one-off events, we are also running two series of regular webinars in 2023:
+            </p>
 
 
-<div class= "flex flex-col lg:flex-row justify-around items-stretch mb-8 ">
-<div class="lg:w-5/12 mb-6"><h4>Research Methods Seminar Series</h4>
-<p>RMS is running seminars every two months in 2023. These cover a range of topics related to research design, data collection and management, data analysis and interpretation. 
-</p>
-</div>
-<div class="lg:w-5/12 mb-6 "><h4>FRN RM Sessions</h4>
-<p>Monthly FRN sessions alternate between having a practical agroecological focus and going into detail on relevant research methods topics. Contributions are led by grantees or other external speakers involved with FRNs. 
+            <div class= "flex flex-col lg:flex-row justify-around items-stretch mb-8 ">
+            <div class="lg:w-5/12 mb-6"><h4>Research Methods Seminar Series</h4>
+            <p>RMS is running seminars every two months in 2023. These cover a range of topics related to research design, data collection and management, data analysis and interpretation.
+            </p>
+            </div>
+            <div class="lg:w-5/12 mb-6 "><h4>FRN RM Sessions</h4>
+            <p>Monthly FRN sessions alternate between having a practical agroecological focus and going into detail on relevant research methods topics. Contributions are led by grantees or other external speakers involved with FRNs.
 
-</p>
-</div> -->
-</div>
+            </p>
+            </div> -->
+        </div>
 </x-layouts.app>

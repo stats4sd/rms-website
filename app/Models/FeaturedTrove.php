@@ -31,7 +31,14 @@ class FeaturedTrove extends Model
 
     public function getTroveCoverImageAttribute()
     {
-        return collect($this->trove_data['cover_image'])->first()['original_url'];
+        if(!$this->trove_data)
+        {
+            return '';
+        }
+
+        $coverImage = collect($this->trove_data['cover_image'])->first();
+
+        return $coverImage ? $coverImage['original_url'] : '';
     }
 
 }
