@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto ">
+    <div class="container mx-auto px-10">
 
 
         <div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">
@@ -27,7 +27,7 @@
             @foreach($events as $event)
                 <x-event-display :event="$event"/>
             @endforeach
-            <h3>Past Events</h3>
+            <h3 class="mt-10">Past Events</h3>
             <div class="divider"></div>
 
             @foreach($pastEvents as $event)

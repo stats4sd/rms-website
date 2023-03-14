@@ -26,18 +26,20 @@
                 class="text-left w-full resource-cards  mx-auto flex flex-col lg:flex-row justify-between items-stretch mb-8 mt-10">
 
                 @foreach($featuredTroves as $trove)
-                    <div class="card  lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
-                        <figure><img src="{{ $trove->trove_cover_image }}"
-                                     alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
-                        <div class="card-body  self-end mt-10">
-                            <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
-                            <p>{!! Str::limit($trove->trove_data['description'], 100, '...') !!}</p>
+                    @if($trove->trove_data)
+                        <div class="card  lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
+                            <figure><img src="{{ $trove->trove_cover_image }}"
+                                         alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
+                            <div class="card-body  self-end mt-10">
+                                <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
+                                <p>{!! Str::limit($trove->trove_data['description'], 100, '...') !!}</p>
 
+                            </div>
+                            <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
+                               href="{{ config('app.resources_site_url') . '/resources/' . $trove->trove_data['slug'] }}"
+                               target="blank"> </a>
                         </div>
-                        <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
-                           href="{{ config('app.resources_site_url') . '/resources/' . $trove->trove_data['slug'] }}"
-                           target="blank"> </a>
-                    </div>
+                    @endif
 
                 @endforeach
 
@@ -61,94 +63,56 @@
                 {{--</div>--}}
             </div>
 
-            <!--
-
-            <div class= "text-left w-full   mx-auto flex flex-col md:flex-row justify-between items-stretch mb-16 mt-10">
-            <div class="card w-96 bg-base-100 shadow-xl mx-3">
-              <figure><img src="img/presentingresults.jpg" class="object-cover w-full h-48" alt="Presenting results" /></figure>
-              <div class="card-body ">
-                <h3 class="card-title mt-0">Presenting Research Results</h3>
-                <p>An online guide about how to present research results. Includes videos, written guidance and links for further reading.</p>
-                <div class="card-actions justify-center">
-                  <a href="https://stats4sd.org/resources/presenting-research-results-placeholder_2021-05-10_06:15:25" target="blank"><button class="btn btn-primary border-none mt-4">View Resource</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="card w-96 bg-base-100 shadow-xl mx-3">
-              <figure><img src="img/oxc1.png" class="object-cover w-full h-48" alt="Presenting results" /></figure>
-              <div class="card-body ">
-                <h3 class="card-title mt-0">Options by Context - The Concept</h2>
-                <p>In this short video, Ric Coe introduces the concepts of options by context interactions.</p>
-                <div class="card-actions justify-center">
-                  <a href="https://stats4sd.org/resources/options-by-context-the-concept_2019-05-13_19:34:34" target="blank"><button class="btn btn-primary border-none mt-4">View Resource</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="card w-96 bg-base-100 shadow-xl mx-3">
-              <figure><img src="img/datamanagement.png" class="object-cover w-full h-48" alt="Presenting results" /></figure>
-              <div class="card-body ">
-                <h3 class="card-title mt-0">Introduccion al manejo de datos en R</h3>
-                <p class="hidden md:block" >Introduccion al manejo de datos en R (en español).</p>
-                <div class="card-actions justify-center">
-                  <a href="https://stats4sd.org/resources/introduccion-al-manejo-de-datos-en-r_2019-05-13_19:49:55" target="blank"><button class="btn btn-primary border-none mt-4">View Resource</button></a>
-                </div>
-              </div>
-            </div>
-
-            </div>
-
-            <div class="carousel w-full 2xl:w-5/6 mt-4 mb-10 max-h-80 md:max-h-full mx-auto drop-shadow-xl" style="height: 420px">
-              <div id="slide1" class="carousel-item relative w-full">
-                <img src="img/presentingresults.jpg" class="w-full object-cover " />
-                <div class="absolute bg-black bg-opacity-70 h-1/3 w-full top-2/3 text-white px-10 sm:px-20 py-2 sm:py-5">
-                <h3 class="text-white mt-0">Presenting Research Results</h3>
-                <p class="hidden md:block" >An online guide about how to present research results. Includes videos, written guidance and links for further reading.</p>
-                </div>
-                <a class="block absolute h-full w-full top-0" href="https://stats4sd.org/resources/presenting-research-results-placeholder_2021-05-10_06:15:25"> </a>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-
-                  <a href="#slide3" class="btn btn-circle">❮</a>
-                  <a href="#slide2" class="btn btn-circle">❯</a>
-                </div>
-              </div>
-              <div id="slide2" class="carousel-item relative w-full">
-                <img src="img/oxc1.png" class="w-full object-cover" />
-                <div class="absolute bg-black bg-opacity-70 h-1/3 w-full top-2/3 text-white px-20 py-50">
-                <h3 class="text-white">Options by Context - The Concept</h3>
-                <p class="hidden md:block" >In this short video, Ric Coe introduces the concepts of options by context interactions.</p>
-                </div>
-                <a class="block absolute h-full w-full top-0" href="https://stats4sd.org/resources/options-by-context-the-concept_2019-05-13_19:34:34"> </a>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide1" class="btn btn-circle">❮</a>
-                  <a href="#slide3" class="btn btn-circle">❯</a>
-                </div>
-              </div>
-              <div id="slide3" class="carousel-item relative w-full">
-                <img src="img/datamanagement.png" class="w-full object-cover" />
-                <div class="absolute bg-black bg-opacity-70 h-1/3 w-full top-2/3 text-white px-20 py-50">
-                <h3 class="text-white">Introduccion al manejo de datos en R </h3>
-                <p class="hidden md:block" >Introduccion al manejo de datos en R (en español). </p>
-                </div>
-                <a class="block absolute h-full w-full top-0" href="https://stats4sd.org/resources/introduccion-al-manejo-de-datos-en-r_2019-05-13_19:49:55"> </a>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide2" class="btn btn-circle">❮</a>
-                  <a href="#slide1" class="btn btn-circle">❯</a>
-                </div>
-              </div>
-
-
-            </div> -->
-
 
             <a href="{{ config('app.resources_site_url')}}/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP">
                 <button class="btn-primary block mx-auto">View all RMS Resources</button>
             </a>
 
+            <div class="grid-cols-1 lg:flex lg:flex-row  lg:justify-between items-center my-10 ">
 
-            <h3>Upcoming Courses</h3>
+                <div class="lg:mx-8 lg:pr-5 mx-auto pt-5 lg:pt-0">
+                    <h4 class=" my-4">Youtube Channel</h4>
+                    Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful
+                    walkthroughs, and reflections on the research process.
+                    <a href="https://www.youtube.com/@Stats4SD">
+                        <button class="btn-primary block mx-auto mb-10">View YouTube Channel</button>
+                    </a>
+
+                </div>
+                <div>
+                    <iframe class=" mx-auto " width="560" height="315" src="https://www.youtube.com/embed/mXwTomEpHvc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <h3>Courses and workshops</h3>
             <div class="divider"></div>
 
+            <p class="mb-10">RMS frequently organises workshops, seminars and training events. The majority of these are
+                held online, usually with live translation between English, French and Spanish available. Our <a
+                    href="{{ url('events') }}">events page</a> contains details and links to register for upcoming
+                events.
+            </p>
+            <a href="{{ url('events') }}">
+                <button class="btn-primary block mx-auto">See upcoming events</button>
+            </a>
+            <!--
+            <p class="mt-10 mb-5">Along with other one-off events, we are also running two series of regular webinars in 2023:
+            </p>
 
 
-            <button class="btn-primary block">See all RMS events</button>
+            <div class= "flex flex-col lg:flex-row justify-around items-stretch mb-8 ">
+            <div class="lg:w-5/12 mb-6"><h4>Research Methods Seminar Series</h4>
+            <p>RMS is running seminars every two months in 2023. These cover a range of topics related to research design, data collection and management, data analysis and interpretation.
+            </p>
+            </div>
+            <div class="lg:w-5/12 mb-6 "><h4>FRN RM Sessions</h4>
+            <p>Monthly FRN sessions alternate between having a practical agroecological focus and going into detail on relevant research methods topics. Contributions are led by grantees or other external speakers involved with FRNs.
+
+            </p>
+            </div> -->
+        </div>
 </x-layouts.app>

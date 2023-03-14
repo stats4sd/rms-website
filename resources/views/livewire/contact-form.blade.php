@@ -1,6 +1,6 @@
-<form wire:submit.prevent="submit" class="p-8 max-w-md">
+<form wire:submit.prevent="submit" class="p-8 max-w-2xl mx-auto" >
     {{ $this->form }}
 
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn-primary">Submit</button>
 
 </form>
