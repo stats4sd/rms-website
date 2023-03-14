@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('joining_instructions');
-            $table->string('register_url')->nullable();
+            $table->string('registration_url')->nullable();
             $table->timestamps();
         });
     }

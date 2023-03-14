@@ -20,7 +20,7 @@ class FeaturedTrove extends Model
 
     public function trove()
     {
-        return $this->belongsTo(Trove::class);
+        return $this->setConnection('trove_mysql')->belongsTo(Trove::class);
     }
 
     public function getTroveDataAttribute()

@@ -51,10 +51,16 @@ class EventTypeCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::field('name')->required();
-        CRUD::field('instructions')
-        ->type('textarea')->required();
-        CRUD::field('register_url');
+        CRUD::setValidation([
+            'name' => 'required',
+            'joining_instructions' => 'required',
+            'registration_url' => 'required|url',
+        ]);
+
+        CRUD::field('name');
+        CRUD::field('joining_instructions')
+        ->type('textarea');
+        CRUD::field('registration_url');
     }
 
     /**

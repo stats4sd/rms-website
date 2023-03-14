@@ -9,10 +9,8 @@
         </h4>
         <div class="collapse-content pl-5">
             <p class="pb-4">
-                {{ $event->body }}
+                {!! $event->body !!}
             </p>
-
-
             <div class="card">
                 <div class="card-body pl-0">
                     <h4>Related Resources</h4>
@@ -28,9 +26,9 @@
 
             @if(!$isPast)
                 <p class="pb-4">
-                    {{ $event->eventType->joining_instructions }}
+                    {{ ($event->joining_instructions ?? $event->eventType?->joining_instructions) ?? '' }}
                 </p>
-                <a href="{{ $event->register_url }}">Click here to register</a>
+                <a href="{{ ($event->registration_url ?? $event->eventType?->registration_url) ?? '' }}">Click here to register</a>
             @endif
         </div>
     </div>

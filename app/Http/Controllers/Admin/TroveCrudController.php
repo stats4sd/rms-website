@@ -7,6 +7,7 @@ use App\Models\FeaturedTrove;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Backpack\EditableColumns\Http\Controllers\Operations\MinorUpdateOperation;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class TroveCrudController
@@ -40,8 +41,17 @@ class TroveCrudController extends CrudController
     {
         $this->crud->setResponsiveTable(false);
 
+        $featuredTroveIds = FeaturedTrove::select('trove_id')->get()->pluck('trove_id')->toArray();
+
+        // only get the latest published version of a trove
         $this->crud->query->whereNull('new_version_id')
-            ->whereNotNull('published_at',);
+            ->whereNotNull('published_at');
+
+        CRUD::filter('featured')
+            ->type('simple')
+            ->ifActive(function () use ($featuredTroveIds) {
+                $this->crud->query = $this->crud->query->whereIn('id', $featuredTroveIds);
+            });
 
 
         CRUD::column('featured')

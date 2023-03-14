@@ -39,19 +39,14 @@ class EventCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('all_day');
+        CRUD::column('title');
         CRUD::column('start');
         CRUD::column('end');
-        CRUD::column('title');
-        CRUD::column('body');
-        CRUD::column('url');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::column('registration_url');
 
-        CRUD::button('sync')
-            ->stack('top')
-            ->type('view')
-            ->view('crud::buttons.sync-events');
+        $this->crud->enableDetailsRow();
+        $this->crud->setDetailsRowView('events.details-row');
+
     }
 
     /**
@@ -62,18 +57,59 @@ class EventCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::field('all_day');
-        CRUD::field('start');
-        CRUD::field('end');
-        CRUD::field('title');
-        CRUD::field('body');
-        CRUD::field('url');
+        CRUD::setValidation([
+            'title' => 'required',
+            'body' => 'required',
+            'start' => 'required',
+            'end' => 'required',
+            'eventType' => 'required',
+        ]);
 
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
+        CRUD::field('title')->label('Event title');
+        CRUD::field('eventType')
+            ->type('relationship');
+        CRUD::field('body')
+            ->label('Event Details')
+            ->type('tinymce')
+            ->options([
+                'menubar' => '',
+                'plugins' => 'lists',
+                'toolbar' => 'undo redo | styleselect | bold italic underline | bullist numlist | alignleft aligncenter alignright alignjustify | outdent indent',
+            ]);
+        CRUD::field('start')->label('Start time and date')->type('datetime_picker');
+        CRUD::field('end')->label('End time and date')->type('datetime_picker');;
+
+
+        CRUD::field('custom_html')
+            ->type('custom_html')
+            ->value('<h4>Joining Instructions</h4><p>Each event type has some default joining instructions. You can add custom ones for this event below if required.</p>');
+
+
+        CRUD::field('joining_instructions_default')
+            ->type('joining_instructions');
+
+        CRUD::field('joining_instructions')
+            ->type('textarea')
+            ->label('Custom joining instructions')
+            ->hint('leave blank to use the default instructions');
+
+
+        CRUD::field('registration_url')
+            ->type('text')
+            ->label('Custom registration_url')
+            ->hint('leave blank to use the default url');
+
+        CRUD::field('eventResources')
+            ->type('relationship')
+            ->relationship('eventResources')
+            ->subfields([
+                [
+                    'name' => 'title',
+                ],
+                [
+                    'name' => 'url'
+                ]
+            ]);
     }
 
     /**
