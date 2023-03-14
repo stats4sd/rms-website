@@ -1,16 +1,16 @@
 <x-mail::message>
 ## New Support Request received
 
-    RMS Team, Assemble! Someone, somewhere, needs our help...
+A support request has been submitted through the RMS website.
 
-    ### Name:
-    {{ $supportRequest->name }}
+### Name:
+{{ $supportRequest->name }}
 
-    ### Email:
-    {{ $supportRequest->email }}
+### Email:
+{{ $supportRequest->email }}
 
-    ### Message:
-    {{ $supportRequest->message }}
+### Message:
+{{ $supportRequest->message }}
 
 Thanks,<br>
 {{ config('app.name') }}

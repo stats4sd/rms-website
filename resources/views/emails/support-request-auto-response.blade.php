@@ -1,17 +1,17 @@
 <x-mail::message>
 ## Thank you for your message
 
-    Your message has been sent to the RMS team. A member of the team will get back to you as soon as possible.
-    For reference, the details of the message are below:
+Your message has been sent to the RMS team. A member of the team will get back to you as soon as possible.
+For reference, the details of the message are below:
 
-    ### Name:
-    {{ $supportRequest->name }}
+### Name:
+{{ $supportRequest->name }}
 
-    ### Email:
-    {{ $supportRequest->email }}
+### Email:
+{{ $supportRequest->email }}
 
-    ### Message:
-    {{ $supportRequest->message }}
+### Message:
+{{ $supportRequest->message }}
 
 Thanks,<br>
 {{ config('app.name') }}
