@@ -23,8 +23,6 @@ class FeaturedTrove extends Model
         'trove_data' => 'array',
     ];
 
-    protected $appends = ['trove_data', 'trove_cover_image'];
-
     protected static function booted()
     {
         parent::booted();
@@ -35,11 +33,15 @@ class FeaturedTrove extends Model
                 ->throw()
                 ->json();
 
-            $image = file_get_contents($featuredTrove->getTroveCoverImageAttribute());
-            $name = Str::afterLast($featuredTrove->getTroveCoverImageAttribute(), '/');
+            $coverImageData = collect($featuredTrove->trove_data['cover_image'])->first();
+
+            $coverImage = $coverImageData ? $coverImageData['original_url'] : '';
+
+            $image = file_get_contents($coverImage);
+            $name = Str::afterLast($coverImage, '/');
             $name = Str::beforeLast($name, '?');
 
-            Storage::put($name, $image);
+            Storage::disk('public')->put($name, $image);
 
             $featuredTrove->cover_image = $name;
             $featuredTrove->saveQuietly();
