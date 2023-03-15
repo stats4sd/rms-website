@@ -42,7 +42,7 @@ class FeaturedTrove extends Model
             Storage::put($name, $image);
 
             $featuredTrove->cover_image = $name;
-            $featuredTrove->save();
+            $featuredTrove->saveQuietly();
         });
     }
 
