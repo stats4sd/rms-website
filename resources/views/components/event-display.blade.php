@@ -15,13 +15,13 @@
         <h4
             x-on:click="open = !open"
             :aria-expanded="open"
-            class="card-title grid grid-row md:grid-cols-10 font-light p-3"
+            class="card-title grid grid-row md:grid-cols-10 font-light p-3 pl-5"
         >
-            <div class="font-semibold md:col-span-6"> {{ $event->title }}</div>
-            <div class="pl-4 md:col-span-3">
+            <div class="font-semibold md:col-span-6 xl:col-span-7"> {{ $event->title }}</div>
+            <div class="md:pl-4 md:col-span-3 xl:col-span-2">
                 {{ ($event->start)->format('d/m/Y G:i')}}
             </div>
-            <div class="md:col-span-1">
+            <div class="md:col-span-1 text-right pr-5">
                 <span x-show="open" aria-hidden="true" class="ml-4">&minus;</span>
                 <span x-show="!open" aria-hidden="true" class="ml-4">&plus;</span>
             </div>

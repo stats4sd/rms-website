@@ -130,7 +130,7 @@
 <p>We run mailing lists and WhatsApp groups for the CCRP CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CCRP network. 
 </p>
 
-<a href="{{ url('events') }}"><button class="btn-primary block mx-auto mb-10">Subscribe for updates</button></a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSf8EJo3hGbqXouYelFJxVOHFnT1jxC-lclMLJfHPsN8yz8sIA/viewform?usp=sf_link"><button class="btn-primary block mx-auto mb-10">Subscribe for updates</button></a>
 
 
             </div> 
