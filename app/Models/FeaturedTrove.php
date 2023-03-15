@@ -7,6 +7,8 @@ use Exception;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class FeaturedTrove extends Model
 {
@@ -31,7 +33,7 @@ class FeaturedTrove extends Model
     public function getTroveDataAttribute($value)
     {
 
-        if (!$value or $value === []) {
+        if (!$value || $value === []) {
 
             try {
                 $data = Http::get(config('app.resources_site_url') . '/api/troves/' . $this->trove_id)
