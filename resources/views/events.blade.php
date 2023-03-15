@@ -24,15 +24,19 @@
             <h3>Upcoming Events</h3>
             <div class="divider"></div>
 
-            @foreach($events as $event)
-                <x-event-display :event="$event"/>
-            @endforeach
+            <div x-data="{active: null}">
+                @foreach($events as $event)
+                    <x-event-display :event="$event"/>
+                @endforeach
+            </div>
             <h3 class="mt-10">Past Events</h3>
             <div class="divider"></div>
 
-            @foreach($pastEvents as $event)
-                <x-event-display :event="$event" :isPast="true"/>
-            @endforeach
+            <div x-data="{active: null}">
+                @foreach($pastEvents as $event)
+                    <x-event-display :event="$event" :isPast="true"/>
+                @endforeach
+            </div>
         </div>
     </div>
 </x-layouts.app>
