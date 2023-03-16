@@ -1,18 +1,18 @@
 <x-mail::message>
-## Thank you for your message
+## {{ t("Thank you for your message") }}
 
-Your message has been sent to the RMS team. A member of the team will get back to you as soon as possible.
-For reference, the details of the message are below:
+{{ t("Your message has been sent to the RMS team. A member of the team will get back to you as soon as possible.
+For reference, the details of the message are below:") }}
 
-### Name:
+### {{ t("Name:") }}
 {{ $supportRequest->name }}
 
-### Email:
+### {{ t("Email:") }}
 {{ $supportRequest->email }}
 
-### Message:
+### {{ t("Message:") }}
 {{ $supportRequest->message }}
 
-Thanks,<br>
+{{ t("Thanks,") }}<br>
 {{ config('app.name') }}
 </x-mail::message>

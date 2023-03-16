@@ -1,0 +1,333 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Laravel\n"
+"Report-Msgid-Bugs-To: contact@translation.io\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-03-16T17:01:32+00:00\n"
+"PO-Revision-Date: 2023-03-16 18:01+0100\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+
+#: resources\views\capacity-building.blade.php:5
+#: resources\views\components\nav-menu.blade.php:4
+#: resources\views\grantees.blade.php:45
+#: resources\views\home.blade.php:28
+msgid "Capacity Building"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:6
+msgid "Courses and Resources"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:15
+msgid "RMS Resources"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:17
+msgid ""
+"Over the last 10 years of supporting CCRP grantees, we have created many different\r\n"
+"                resources, including videos, reference documents, training guides and webinar recordings. You can find\r\n"
+"                these on our <a href=:href> resources repository</a> on the Stats4SD website."
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:24
+msgid "Featured Resources"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:69
+msgid "View all RMS Resources"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:75
+msgid "Youtube Channel"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:76
+msgid ""
+"Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful\r\n"
+"                    walkthroughs, and reflections on the research process."
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:80
+msgid "View YouTube Channel"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:93
+msgid "Courses and workshops"
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:96
+msgid ""
+"RMS frequently organises workshops, seminars and training events. The majority of these are\r\n"
+"                held online, usually with live translation between English, French and Spanish available. Our\r\n"
+"                <a href=:href> events page</a> contains details and links to register for upcoming events."
+msgstr ""
+
+#: resources\views\capacity-building.blade.php:103
+msgid "See upcoming events"
+msgstr ""
+
+#: resources\views\components\layouts\app.blade.php:10
+msgid "RMS for CCRP"
+msgstr ""
+
+#: resources\views\components\nav-menu.blade.php:2
+msgid "Home"
+msgstr "Inicio"
+
+#: resources\views\components\nav-menu.blade.php:3
+#: resources\views\grantees.blade.php:5
+#: resources\views\home.blade.php:18
+msgid "Help for Grantees"
+msgstr ""
+
+#: resources\views\components\nav-menu.blade.php:5
+#: resources\views\home.blade.php:37
+msgid "Events"
+msgstr ""
+
+#: resources\views\components\nav-menu.blade.php:7
+msgid "Change Language"
+msgstr ""
+"Cambiar el \n"
+"idioma"
+
+#: resources\views\emails\support-request-auto-response.blade.php:2
+msgid "Thank you for your message"
+msgstr ""
+
+#: resources\views\emails\support-request-auto-response.blade.php:5
+msgid ""
+"Your message has been sent to the RMS team. A member of the team will get back to you as soon as possible.\r\n"
+"For reference, the details of the message are below:"
+msgstr ""
+
+#: resources\views\emails\support-request-auto-response.blade.php:9
+#: resources\views\emails\support-request-submitted.blade.php:8
+msgid "Name:"
+msgstr ""
+
+#: resources\views\emails\support-request-auto-response.blade.php:14
+#: resources\views\emails\support-request-submitted.blade.php:13
+msgid "Email:"
+msgstr "Email:"
+
+#: resources\views\emails\support-request-auto-response.blade.php:19
+#: resources\views\emails\support-request-submitted.blade.php:18
+msgid "Message:"
+msgstr ""
+
+#: resources\views\emails\support-request-auto-response.blade.php:24
+#: resources\views\emails\support-request-submitted.blade.php:23
+msgid "Thanks,"
+msgstr ""
+
+#: resources\views\emails\support-request-submitted.blade.php:2
+msgid "New Support Request received"
+msgstr ""
+
+#: resources\views\emails\support-request-submitted.blade.php:5
+msgid "A support request has been submitted through the RMS website."
+msgstr ""
+
+#: resources\views\events.blade.php:11
+msgid "RMS Events"
+msgstr ""
+
+#: resources\views\events.blade.php:12
+msgid "Webinars, workshops and more"
+msgstr ""
+
+#: resources\views\events.blade.php:21
+msgid ""
+"We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in\r\n"
+"            many of the events run by the other cross-cutting and regional teams."
+msgstr ""
+
+#: resources\views\events.blade.php:25
+msgid "Upcoming Events"
+msgstr ""
+
+#: resources\views\events.blade.php:33
+msgid "Past Events"
+msgstr ""
+
+#: resources\views\grantees.blade.php:13
+msgid "RMS is constantly looking for opportunities to work with our partners at CCRP to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”"
+msgstr ""
+
+#: resources\views\grantees.blade.php:15
+msgid "How can we help?"
+msgstr ""
+
+#: resources\views\grantees.blade.php:23
+msgid "Let's talk"
+msgstr ""
+
+#: resources\views\grantees.blade.php:26
+msgid "We can arrange discussions through zoom or email at any time, and in-person meetings where appropriate."
+msgstr ""
+
+#: resources\views\grantees.blade.php:34
+msgid "Get our input"
+msgstr ""
+
+#: resources\views\grantees.blade.php:37
+msgid "Invite us to your inception, design, progress or analysis meetings."
+msgstr ""
+
+#: resources\views\grantees.blade.php:48
+msgid "We also offer online <a href=\"<?php echo e(url('capacity-building')); ?>\">resources and events</a> to support capacity-building."
+msgstr ""
+
+#: resources\views\grantees.blade.php:54
+msgid "Contact the team"
+msgstr ""
+
+#: resources\views\grantees.blade.php:64
+msgid "We work:"
+msgstr ""
+
+#: resources\views\grantees.blade.php:65
+msgid "At all levels: "
+msgstr ""
+
+#: resources\views\grantees.blade.php:66
+msgid "From providing individual project support and developing students’ research skills to working with the leadership team to help develop the program’s long-term strategies. "
+msgstr ""
+
+#: resources\views\grantees.blade.php:67
+msgid "In multiple languages: "
+msgstr ""
+
+#: resources\views\grantees.blade.php:68
+msgid "English, Spanish, French and Swahili. "
+msgstr ""
+
+#: resources\views\grantees.blade.php:69
+msgid "Across all CCRP regions: "
+msgstr ""
+
+#: resources\views\grantees.blade.php:70
+msgid "East & Southern Africa, West Africa and the Andes. "
+msgstr ""
+
+#: resources\views\grantees.blade.php:71
+msgid "Advocating mixed methods:"
+msgstr ""
+
+#: resources\views\grantees.blade.php:72
+msgid "Our team includes research design specialists, statisticians, qualitative researchers and data engineers."
+msgstr ""
+
+#: resources\views\grantees.blade.php:88
+msgid "Get in touch"
+msgstr ""
+
+#: resources\views\grantees.blade.php:90
+msgid ""
+"Our team has three regional coordinators that form part of the CCRP Regional team.\r\n"
+"                If you would like any support with your own research at any time, please contact the relevant\r\n"
+"                coordinator for your region. They are:"
+msgstr ""
+
+#: resources\views\grantees.blade.php:100
+msgid "Andes CoP"
+msgstr ""
+
+#: resources\views\grantees.blade.php:101
+msgid "Spanish and English"
+msgstr ""
+
+#: resources\views\grantees.blade.php:107
+msgid "West Africa CoP"
+msgstr ""
+
+#: resources\views\grantees.blade.php:108
+msgid "French and English"
+msgstr ""
+
+#: resources\views\grantees.blade.php:114
+msgid "East and Southern Africa CoP"
+msgstr ""
+
+#: resources\views\grantees.blade.php:115
+msgid "English and Swahili"
+msgstr ""
+
+#: resources\views\grantees.blade.php:120
+msgid "You can of course get in touch with any of your familiar contacts from the RMS team if you prefer."
+msgstr ""
+
+#: resources\views\grantees.blade.php:123
+msgid ""
+"Not sure who to speak to? Use the contact form below to get in touch and we'll put you in contact with a\r\n"
+"                colleague who can help."
+msgstr ""
+
+#: resources\views\home.blade.php:6
+msgid "Research Methods Support for Agroecology"
+msgstr ""
+
+#: resources\views\home.blade.php:7
+msgid "A CCRP cross-cutting project"
+msgstr ""
+
+#: resources\views\home.blade.php:19
+msgid "Are you a CCRP Grantee in need of Research support? Click here!"
+msgstr ""
+
+#: resources\views\home.blade.php:29
+msgid "See our growing collection of online resources."
+msgstr ""
+
+#: resources\views\home.blade.php:38
+msgid "We run a series of training courses and webinars throughout the year."
+msgstr ""
+
+#: resources\views\home.blade.php:100
+msgid ""
+"The Research Methods Support team (RMS) at <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> has been working with the <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Collaborative Crop\r\n"
+"                    Research Programme (CCRP)</a> since 2009, and continues to provide support to its grantees\r\n"
+"                throughout the research process:"
+msgstr ""
+
+#: resources\views\home.blade.php:107
+msgid "Research inception, design and planning"
+msgstr ""
+
+#: resources\views\home.blade.php:111
+msgid "Adapting perspectives and methods for working with farmers "
+msgstr ""
+
+#: resources\views\home.blade.php:115
+msgid "Data collection, management, and analysis"
+msgstr ""
+
+#: resources\views\home.blade.php:119
+msgid "Preparation of research products"
+msgstr ""
+
+#: resources\views\home.blade.php:123
+msgid "Focus on research for agroecology."
+msgstr ""
+
+#: resources\views\home.blade.php:123
+msgid "Systems, transdisciplinarity, and action research"
+msgstr ""
+
+#: resources\views\home.blade.php:128
+msgid "Stay in touch"
+msgstr ""
+
+#: resources\views\home.blade.php:130
+msgid "We run mailing lists and WhatsApp groups for the CCRP CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CCRP network. "
+msgstr ""
+
+#: resources\views\livewire\contact-form.blade.php:5
+msgid "Submit"
+msgstr ""

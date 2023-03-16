@@ -18,7 +18,8 @@
         "orangehill/iseed": "^3.0",
         "spatie/laravel-translatable": "^6.3",
         "symfony/http-client": "^6.2",
-        "symfony/mailgun-mailer": "^6.2"
+        "symfony/mailgun-mailer": "^6.2",
+        "tio/laravel": "^1.22"
     },
     "require-dev": {
         "backpack/generators": "^3.3",
