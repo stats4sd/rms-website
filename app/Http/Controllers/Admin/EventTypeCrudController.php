@@ -40,7 +40,7 @@ class EventTypeCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name');
-        CRUD::column('instructions')->type('textarea');
+        CRUD::column('joining_instructions');
     }
 
     /**
