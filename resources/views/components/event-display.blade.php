@@ -52,8 +52,9 @@
             <p class="pb-4">
                 {{ ($event->joining_instructions ?? $event->eventType?->joining_instructions) ?? '' }}
             </p>
-            <a href="{{ ($event->registration_url ?? $event->eventType?->registration_url) ?? '' }}">Click here to
-                register</a>
+            <a href="{{ ($event->registration_url ?? $event->eventType?->registration_url) ?? '' }}">
+                {{ t("Click here to register") }}
+            </a>
         @endif
     </div>
 </div>
