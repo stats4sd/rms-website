@@ -38,7 +38,7 @@ class Trove extends Model
         parent::__construct($attributes);
     }
 
-    protected $fillable = ['featured'];
+    protected $fillable = ['featured_en', 'featured_fr', 'featured_es'];
     protected $guarded = ['id'];
 
     public function featuredTrove()

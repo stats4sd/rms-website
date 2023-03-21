@@ -11,7 +11,9 @@ class CapacityBuildingController extends Controller
 {
     public function index()
     {
-        $featuredTroves = FeaturedTrove::with('trove')->get();
+        $featuredTroves = FeaturedTrove::with('trove')
+            ->where('locale', app()->getLocale())
+            ->get();
 
 
         return view('capacity-building', [
