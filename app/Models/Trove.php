@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Attribute;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Backpack\CRUD\app\Models\Traits\HasTranslatableFields;
 use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
+use League\CommonMark\Extension\Attributes\Util\AttributesHelper;
 
 class Trove extends Model
 {
@@ -34,21 +36,30 @@ class Trove extends Model
 
     public function __construct(array $attributes = [])
     {
-        $this->table = config('database.connections.trove_mysql.database').'.'.$this->table;
+        $this->table = config('database.connections.trove_mysql.database') . '.' . $this->table;
         parent::__construct($attributes);
     }
 
-    protected $fillable = ['featured'];
+    protected $fillable = ['featured_en', 'featured_fr', 'featured_es'];
     protected $guarded = ['id'];
 
     public function featuredTrove()
     {
-        return $this->setConnection('mysql')->hasOne(FeaturedTrove::class, 'trove_id', 'id');
+        return $this->setConnection('mysql')->hasMany(FeaturedTrove::class, 'trove_id', 'id');
     }
 
-    public function getFeaturedAttribute()
+    public function getFeaturedEnAttribute()
     {
-        return $this->featuredTrove()->count() > 0;
+            return $this->featuredTrove()->where('locale', 'en')->count() > 0;
     }
 
+    public function getFeaturedFrAttribute()
+    {
+            return $this->featuredTrove()->where('locale', 'fr')->count() > 0;
+    }
+
+    public function getFeaturedEsAttribute()
+    {
+            return $this->featuredTrove()->where('locale', 'es')->count() > 0;
+    }
 }

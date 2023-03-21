@@ -8,6 +8,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Backpack\EditableColumns\Http\Controllers\Operations\MinorUpdateOperation;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 /**
  * Class TroveCrudController
@@ -54,8 +55,15 @@ class TroveCrudController extends CrudController
             });
 
 
-        CRUD::column('featured')
+        CRUD::column('featured_en')
             ->type('editable_checkbox');
+
+        CRUD::column('featured_fr')
+            ->type('editable_checkbox');
+
+        CRUD::column('featured_es')
+            ->type('editable_checkbox');
+
 
         CRUD::column('title')->limit(500)
             ->wrapper([
@@ -72,12 +80,18 @@ class TroveCrudController extends CrudController
         // custom logic for a user adding themselves to a project
         $entry = $this->crud->getModel()->find(request('id'));
 
+        // check attribute name to get locale
+        $locale = Str::of(request('attribute'))->after('featured_');
+
         if (request('value') === "1") {
             FeaturedTrove::updateOrCreate([
                 'trove_id' => $entry->id,
+                'locale' => $locale,
             ]);
         } else {
-            FeaturedTrove::where('trove_id', $entry->id)->delete();
+            FeaturedTrove::where('trove_id', $entry->id)
+                ->where('locale', $locale)
+                ->delete();
         }
 
         return $entry;
