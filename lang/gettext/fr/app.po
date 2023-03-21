@@ -7,73 +7,98 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-16T17:01:32+00:00\n"
-"PO-Revision-Date: 2023-03-16 18:01+0100\n"
+"POT-Creation-Date: 2023-03-21T12:27:13+00:00\n"
+"PO-Revision-Date: 2023-03-21 13:27+0100\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#: app\Http\Livewire\ContactForm.php:32
+msgid "Name"
+msgstr "Nom"
+
+#: app\Http\Livewire\ContactForm.php:36
+msgid "Email"
+msgstr "Email:"
+
+#: app\Http\Livewire\ContactForm.php:37
+msgid "Message"
+msgstr "Méssage"
+
+#: app\Http\Livewire\ContactForm.php:48
+#: resources\views\emails\support-request-auto-response.blade.php:2
+msgid "Thank you for your message"
+msgstr "Merci pour votre message"
+
+#: app\Http\Livewire\ContactForm.php:49
+msgid "Your message has been sent to our RMS support team. You will receive an automated confirmation via email, and one of our team will reply as soon as possible."
+msgstr "Votre message a été envoyé à notre équipe d'assistance RMS. Vous recevrez une confirmation automatisée par e-mail et un membre de notre équipe vous répondra dans les plus brefs délais."
 
 #: resources\views\capacity-building.blade.php:5
 #: resources\views\components\nav-menu.blade.php:4
 #: resources\views\grantees.blade.php:45
 #: resources\views\home.blade.php:28
 msgid "Capacity Building"
-msgstr ""
+msgstr "Renforcement des capacités"
 
 #: resources\views\capacity-building.blade.php:6
 msgid "Courses and Resources"
-msgstr ""
+msgstr "Cours et ressources"
 
 #: resources\views\capacity-building.blade.php:15
 msgid "RMS Resources"
-msgstr ""
+msgstr "Ressources RMS"
 
 #: resources\views\capacity-building.blade.php:17
 msgid ""
 "Over the last 10 years of supporting CCRP grantees, we have created many different\r\n"
 "                resources, including videos, reference documents, training guides and webinar recordings. You can find\r\n"
 "                these on our <a href=:href> resources repository</a> on the Stats4SD website."
-msgstr ""
+msgstr "Au cours des 10 dernières années de soutien aux bénéficiaires du CCRP, nous avons créé de nombreuses ressources différentes, notamment des vidéos, des documents de référence, des guides de formation et des enregistrements de webinaires. Vous pouvez les trouver sur notre <a href=:href>référentiel de ressources</a> sur le site Web Stats4SD."
 
 #: resources\views\capacity-building.blade.php:24
 msgid "Featured Resources"
-msgstr ""
+msgstr "Ressources en vedette"
 
 #: resources\views\capacity-building.blade.php:69
 msgid "View all RMS Resources"
-msgstr ""
+msgstr "Afficher toutes les ressources RMS"
 
 #: resources\views\capacity-building.blade.php:75
 msgid "Youtube Channel"
-msgstr ""
+msgstr "Chaîne Youtube"
 
 #: resources\views\capacity-building.blade.php:76
 msgid ""
 "Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful\r\n"
 "                    walkthroughs, and reflections on the research process."
-msgstr ""
+msgstr "Visitez la chaîne YouTube Stats4SD pour trouver des guides sur les concepts et logiciels statistiques, des procédures pas à pas utiles et des réflexions sur le processus de recherche."
 
 #: resources\views\capacity-building.blade.php:80
 msgid "View YouTube Channel"
-msgstr ""
+msgstr "Voir la chaîne YouTube"
 
 #: resources\views\capacity-building.blade.php:93
 msgid "Courses and workshops"
-msgstr ""
+msgstr "Cours et ateliers"
 
 #: resources\views\capacity-building.blade.php:96
 msgid ""
 "RMS frequently organises workshops, seminars and training events. The majority of these are\r\n"
 "                held online, usually with live translation between English, French and Spanish available. Our\r\n"
 "                <a href=:href> events page</a> contains details and links to register for upcoming events."
-msgstr ""
+msgstr "RMS organise fréquemment des ateliers, des séminaires et des événements de formation. La majorité d'entre eux se déroulent en ligne, généralement avec une traduction en direct entre l'anglais, le français et l'espagnol disponible. Notre <a href=:href>page d'événements</a> contient des détails et des liens pour vous inscrire aux événements à venir."
 
 #: resources\views\capacity-building.blade.php:103
 msgid "See upcoming events"
-msgstr ""
+msgstr "Voir les événements à venir"
+
+#: resources\views\components\event-display.blade.php:42
+msgid "Related Resources"
+msgstr "Ressources associées"
 
 #: resources\views\components\layouts\app.blade.php:10
 msgid "RMS for CCRP"
-msgstr ""
+msgstr "RMS pour CCRP"
 
 #: resources\views\components\nav-menu.blade.php:2
 msgid "Home"
@@ -83,31 +108,27 @@ msgstr "Page d'accueil"
 #: resources\views\grantees.blade.php:5
 #: resources\views\home.blade.php:18
 msgid "Help for Grantees"
-msgstr ""
+msgstr "Aide aux bénéficiaires"
 
 #: resources\views\components\nav-menu.blade.php:5
 #: resources\views\home.blade.php:37
 msgid "Events"
-msgstr ""
+msgstr "Événements"
 
-#: resources\views\components\nav-menu.blade.php:7
+#: resources\views\components\nav-menu.blade.php:16
 msgid "Change Language"
-msgstr ""
-
-#: resources\views\emails\support-request-auto-response.blade.php:2
-msgid "Thank you for your message"
-msgstr ""
+msgstr "Changer de langue"
 
 #: resources\views\emails\support-request-auto-response.blade.php:5
 msgid ""
 "Your message has been sent to the RMS team. A member of the team will get back to you as soon as possible.\r\n"
 "For reference, the details of the message are below:"
-msgstr ""
+msgstr "Votre message a été envoyé à l'équipe RMS. Un membre de l'équipe vous répondra dans les plus brefs délais. Pour référence, les détails du message sont ci-dessous :"
 
 #: resources\views\emails\support-request-auto-response.blade.php:9
 #: resources\views\emails\support-request-submitted.blade.php:8
 msgid "Name:"
-msgstr ""
+msgstr "Nom:"
 
 #: resources\views\emails\support-request-auto-response.blade.php:14
 #: resources\views\emails\support-request-submitted.blade.php:13
@@ -117,215 +138,219 @@ msgstr "Email:"
 #: resources\views\emails\support-request-auto-response.blade.php:19
 #: resources\views\emails\support-request-submitted.blade.php:18
 msgid "Message:"
-msgstr ""
+msgstr "Message:"
 
 #: resources\views\emails\support-request-auto-response.blade.php:24
 #: resources\views\emails\support-request-submitted.blade.php:23
 msgid "Thanks,"
-msgstr ""
+msgstr "Merci,"
 
 #: resources\views\emails\support-request-submitted.blade.php:2
 msgid "New Support Request received"
-msgstr ""
+msgstr "Nouvelle demande d'assistance reçue"
 
 #: resources\views\emails\support-request-submitted.blade.php:5
 msgid "A support request has been submitted through the RMS website."
-msgstr ""
+msgstr "Une demande d'assistance a été soumise via le site web de RMS."
 
 #: resources\views\events.blade.php:11
 msgid "RMS Events"
-msgstr ""
+msgstr "Événements RMS"
 
 #: resources\views\events.blade.php:12
 msgid "Webinars, workshops and more"
-msgstr ""
+msgstr "Webinaires, ateliers et plus"
 
 #: resources\views\events.blade.php:21
 msgid ""
 "We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in\r\n"
 "            many of the events run by the other cross-cutting and regional teams."
-msgstr ""
+msgstr "Nous organisons une série d'événements tout au long de l'année, où tous les bénéficiaires du CCRP sont les bienvenus. Nous sommes également impliqués dans de nombreux événements organisés par les autres équipes transversales et régionales."
 
 #: resources\views\events.blade.php:25
 msgid "Upcoming Events"
-msgstr ""
+msgstr "Évènements à venir"
 
 #: resources\views\events.blade.php:33
 msgid "Past Events"
-msgstr ""
+msgstr "Événements passés"
 
 #: resources\views\grantees.blade.php:13
 msgid "RMS is constantly looking for opportunities to work with our partners at CCRP to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”"
-msgstr ""
+msgstr "RMS est constamment à la recherche d'opportunités de travailler avec nos partenaires du CCRP pour remplir la mission du programme \"<i>assurer un monde où tous ont accès à des aliments nutritifs produits de manière durable par les populations locales</i>\"."
 
 #: resources\views\grantees.blade.php:15
 msgid "How can we help?"
-msgstr ""
+msgstr "Comment pouvons nous aider?"
 
 #: resources\views\grantees.blade.php:23
 msgid "Let's talk"
-msgstr ""
+msgstr "Parlons"
 
 #: resources\views\grantees.blade.php:26
 msgid "We can arrange discussions through zoom or email at any time, and in-person meetings where appropriate."
-msgstr ""
+msgstr "Nous pouvons organiser des discussions par zoom ou par e-mail à tout moment, et des réunions en personne le cas échéant."
 
 #: resources\views\grantees.blade.php:34
 msgid "Get our input"
-msgstr ""
+msgstr "Obtenez notre contribution"
 
 #: resources\views\grantees.blade.php:37
 msgid "Invite us to your inception, design, progress or analysis meetings."
-msgstr ""
+msgstr "Invitez-nous à vos réunions de démarrage, de conception, d'avancement ou d'analyse."
 
 #: resources\views\grantees.blade.php:48
 msgid "We also offer online <a href=\"<?php echo e(url('capacity-building')); ?>\">resources and events</a> to support capacity-building."
-msgstr ""
+msgstr "Nous proposons également <a href=\"<?php echo e(url('capacity-building')); ?>\">des ressources et des événements</a> en ligne pour soutenir le renforcement des capacités."
 
 #: resources\views\grantees.blade.php:54
 msgid "Contact the team"
-msgstr ""
+msgstr "Contactez l'équipe"
 
 #: resources\views\grantees.blade.php:64
 msgid "We work:"
-msgstr ""
+msgstr "Nous travaillons:"
 
 #: resources\views\grantees.blade.php:65
 msgid "At all levels: "
-msgstr ""
+msgstr "À tous les niveaux:"
 
 #: resources\views\grantees.blade.php:66
 msgid "From providing individual project support and developing students’ research skills to working with the leadership team to help develop the program’s long-term strategies. "
-msgstr ""
+msgstr "Qu'il s'agisse de fournir un soutien aux projets individuels et de développer les compétences de recherche des étudiants ou de travailler avec l'équipe de direction pour aider à développer les stratégies à long terme du programme."
 
 #: resources\views\grantees.blade.php:67
 msgid "In multiple languages: "
-msgstr ""
+msgstr "En plusieurs langues :"
 
 #: resources\views\grantees.blade.php:68
 msgid "English, Spanish, French and Swahili. "
-msgstr ""
+msgstr "Anglais, espagnol, français et swahili."
 
 #: resources\views\grantees.blade.php:69
 msgid "Across all CCRP regions: "
-msgstr ""
+msgstr "Dans toutes les régions du CCRP :"
 
 #: resources\views\grantees.blade.php:70
 msgid "East & Southern Africa, West Africa and the Andes. "
-msgstr ""
+msgstr "Afrique orientale et australe, Afrique de l'Ouest et Andes."
 
 #: resources\views\grantees.blade.php:71
 msgid "Advocating mixed methods:"
-msgstr ""
+msgstr "Prôner les méthodes mixtes :"
 
 #: resources\views\grantees.blade.php:72
 msgid "Our team includes research design specialists, statisticians, qualitative researchers and data engineers."
-msgstr ""
+msgstr "Notre équipe comprend des spécialistes en conception de recherche, des statisticiens, des chercheurs qualitatifs et des ingénieurs de données."
 
 #: resources\views\grantees.blade.php:88
 msgid "Get in touch"
-msgstr ""
+msgstr "Entrer en contact"
 
 #: resources\views\grantees.blade.php:90
 msgid ""
 "Our team has three regional coordinators that form part of the CCRP Regional team.\r\n"
 "                If you would like any support with your own research at any time, please contact the relevant\r\n"
 "                coordinator for your region. They are:"
-msgstr ""
+msgstr "Notre équipe compte trois coordonnateurs régionaux qui font partie de l'équipe régionale du CCRP. Si vous souhaitez un soutien pour vos propres recherches à tout moment, veuillez contacter le coordinateur compétent pour votre région. Ils sont:"
 
 #: resources\views\grantees.blade.php:100
 msgid "Andes CoP"
-msgstr ""
+msgstr "CdP des Andes"
 
 #: resources\views\grantees.blade.php:101
 msgid "Spanish and English"
-msgstr ""
+msgstr "Espagnol et anglais"
 
 #: resources\views\grantees.blade.php:107
 msgid "West Africa CoP"
-msgstr ""
+msgstr "CdP Afrique de l'Ouest"
 
 #: resources\views\grantees.blade.php:108
 msgid "French and English"
-msgstr ""
+msgstr "Français et anglais"
 
 #: resources\views\grantees.blade.php:114
 msgid "East and Southern Africa CoP"
-msgstr ""
+msgstr "CdP Afrique orientale et australe"
 
 #: resources\views\grantees.blade.php:115
 msgid "English and Swahili"
-msgstr ""
+msgstr "Anglais et swahili"
 
 #: resources\views\grantees.blade.php:120
 msgid "You can of course get in touch with any of your familiar contacts from the RMS team if you prefer."
-msgstr ""
+msgstr "Vous pouvez bien sûr entrer en contact avec l'un de vos contacts familiers de l'équipe RMS si vous préférez."
 
 #: resources\views\grantees.blade.php:123
 msgid ""
 "Not sure who to speak to? Use the contact form below to get in touch and we'll put you in contact with a\r\n"
 "                colleague who can help."
-msgstr ""
+msgstr "Vous ne savez pas à qui parler ? Utilisez le formulaire de contact ci-dessous pour nous contacter et nous vous mettrons en contact avec un collègue qui pourra vous aider."
 
 #: resources\views\home.blade.php:6
 msgid "Research Methods Support for Agroecology"
-msgstr ""
+msgstr "Appui aux méthodes de recherche pour l'agroécologie"
 
 #: resources\views\home.blade.php:7
 msgid "A CCRP cross-cutting project"
-msgstr ""
+msgstr "Un projet transversal du CCRP"
 
 #: resources\views\home.blade.php:19
 msgid "Are you a CCRP Grantee in need of Research support? Click here!"
-msgstr ""
+msgstr "Êtes-vous un bénéficiaire du CCRP et avez-vous besoin d'un soutien à la recherche? Cliquez ici!"
 
 #: resources\views\home.blade.php:29
 msgid "See our growing collection of online resources."
-msgstr ""
+msgstr "Consultez notre collection croissante de ressources en ligne."
 
 #: resources\views\home.blade.php:38
 msgid "We run a series of training courses and webinars throughout the year."
-msgstr ""
+msgstr "Nous organisons une série de formations et de webinaires tout au long de l'année."
 
 #: resources\views\home.blade.php:100
 msgid ""
 "The Research Methods Support team (RMS) at <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> has been working with the <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Collaborative Crop\r\n"
 "                    Research Programme (CCRP)</a> since 2009, and continues to provide support to its grantees\r\n"
 "                throughout the research process:"
-msgstr ""
+msgstr "L'équipe d'appui aux méthodes de recherche (RMS) de <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> travaille avec le <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Programme de recherche collaborative sur les cultures (CCRP)</a> depuis 2009 et continue de fournir un soutien à ses bénéficiaires tout au long du processus de recherche"
 
 #: resources\views\home.blade.php:107
 msgid "Research inception, design and planning"
-msgstr ""
+msgstr "Initiation, conception et planification de la recherche"
 
 #: resources\views\home.blade.php:111
 msgid "Adapting perspectives and methods for working with farmers "
-msgstr ""
+msgstr "Adapter les perspectives et les méthodes de travail avec les agriculteurs"
 
 #: resources\views\home.blade.php:115
 msgid "Data collection, management, and analysis"
-msgstr ""
+msgstr "Collecte, gestion et analyse des données"
 
 #: resources\views\home.blade.php:119
 msgid "Preparation of research products"
-msgstr ""
+msgstr "Préparation de produits de recherche"
 
 #: resources\views\home.blade.php:123
 msgid "Focus on research for agroecology."
-msgstr ""
+msgstr "Focus sur la recherche pour l'agroécologie."
 
 #: resources\views\home.blade.php:123
 msgid "Systems, transdisciplinarity, and action research"
-msgstr ""
+msgstr "Systèmes, transdisciplinarité et recherche-action"
 
 #: resources\views\home.blade.php:128
 msgid "Stay in touch"
-msgstr ""
+msgstr "Reste en contact"
 
 #: resources\views\home.blade.php:130
 msgid "We run mailing lists and WhatsApp groups for the CCRP CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CCRP network. "
-msgstr ""
+msgstr "Nous gérons des listes de diffusion et des groupes WhatsApp pour les CCRP CdPs. Nous utilisons ces groupes pour partager de nouvelles ressources RMS, des informations sur les événements à venir et des nouvelles générales sur l'ensemble du réseau CCRP."
+
+#: resources\views\home.blade.php:134
+msgid "Subscribe for updates"
+msgstr "Abonnez-vous pour les mises à jour"
 
 #: resources\views\livewire\contact-form.blade.php:5
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"

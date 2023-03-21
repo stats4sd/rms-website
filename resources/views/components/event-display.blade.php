@@ -37,7 +37,7 @@
         </p>
         <div class="card">
             <div class="card-body pl-0">
-                <h4>Related Resources</h4>
+                <h4>{{ t("Related Resources") }}</h4>
                 <ul class="pb-4 pl-4 list-disc">
 
                     @foreach($event->eventResources as $resource)
