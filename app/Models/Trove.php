@@ -48,17 +48,17 @@ class Trove extends Model
         return $this->setConnection('mysql')->hasOne(FeaturedTrove::class, 'trove_id', 'id');
     }
 
-    public function getFeaturedEnAttrubute():
+    public function getFeaturedEnAttrubute()
     {
             return $this->featuredTrove()->where('locale', 'en')->count() > 0;
     }
 
-    public function getFeaturedFrAttrubute():
+    public function getFeaturedFrAttrubute()
     {
             return $this->featuredTrove()->where('locale', 'fr')->count() > 0;
     }
 
-    public function getFeaturedEsAttrubute():
+    public function getFeaturedEsAttrubute()
     {
             return $this->featuredTrove()->where('locale', 'es')->count() > 0;
     }
