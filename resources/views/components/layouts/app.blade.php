@@ -19,8 +19,8 @@
 </head>
 <body data-theme="lemonade" class="">
 
-<div class="navbar bg-base-100">
-    <div class="navbar-start">
+<div class="w-100 flex justify-between bg-base-100">
+    <div class="">
         {{-- Mobile Navigation --}}
         <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@
         </div>
         <a class="btn btn-ghost normal-case text-xl" href="/">RMS</a>
     </div>
-    <div class="navbar-center hidden lg:flex w-3/6 flex-row-reverse mr-20  ">
+    <div class="navbar-center hidden lg:flex flex-row-reverse mr-20  ">
         <x-nav-menu/>
     </div>
 </div>
