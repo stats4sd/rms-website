@@ -1,17 +1,17 @@
 <x-mail::message>
-## New Support Request received
+## {{ t("New Support Request received") }}
 
-A support request has been submitted through the RMS website.
+    {{ t("A support request has been submitted through the RMS website.") }}
 
-### Name:
+### {{ t("Name:") }}
 {{ $supportRequest->name }}
 
-### Email:
+### {{ t("Email:") }}
 {{ $supportRequest->email }}
 
-### Message:
+### {{ t("Message:") }}
 {{ $supportRequest->message }}
 
-Thanks,<br>
+{{ t("Thanks,") }}<br>
 {{ config('app.name') }}
 </x-mail::message>
