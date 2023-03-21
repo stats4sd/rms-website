@@ -19,7 +19,7 @@
 </head>
 <body data-theme="lemonade" class="">
 
-<div class="w-100 flex justify-between bg-base-100">
+<div class="w-100 flex justify-between bg-base-100 py-3">
     <div class="">
         {{-- Mobile Navigation --}}
         <div class="dropdown">
