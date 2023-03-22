@@ -69,7 +69,10 @@ class TroveCrudController extends CrudController
             ->wrapper([
                 'href' => function ($crud, $column, $entry) {
                     return url('https://stats4sd.org/resources/' . $entry->id);
-                }]);
+                }])
+            ->searchLogic(function ($query, $column, $searchTerm) {
+                $query->orWhere('title', 'like', "%$searchTerm%");
+            });
 
     }
 
