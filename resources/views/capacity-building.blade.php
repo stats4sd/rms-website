@@ -31,7 +31,7 @@
                                          alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
                             <div class="card-body  self-end mt-10">
                                 <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
-                                {{ Str::limit($trove->trove_data['description']) }}
+                                {{ strip_tags(Str::limit($trove->trove_data['description'])) }}
 
                             </div>
                             <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
