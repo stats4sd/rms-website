@@ -11,7 +11,7 @@
 
         <div class="lg:w-5/6 mx-auto mt-16 px-10">
         <p class="headline"> {!! t("RMS is constantly looking for opportunities to work with our partners at CCRP to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”") !!}.
-</p>    
+</p>
         <h3>{{ t("How can we help?") }}</h3>
             <div class="divider mb-10"></div>
             <div class="mx-auto w-full xl:w-5/6  md:text-center grid md:grid-cols-3 ">
@@ -19,10 +19,10 @@
                     <img src="img/talkicon.png" class="md:px-20  2xl:px-24 mr-6 md:mx-auto md:mb-5 w-14 md:w-full">
                     <div class="grid grid-rows">
                         <div>
-                    
+
                             <b>{{ t("Let's talk") }}</b>
                         </div>
-                        <div> 
+                        <div>
                             <p>{{ t("We can arrange discussions through zoom or email at any time, and in-person meetings where appropriate.") }}</p></div>
                         </div>
                  </div>
@@ -30,10 +30,10 @@
                     <img src="img/pplicon.png" class="md:px-20 2xl:px-24 mr-6 md:mx-auto md:mb-5 w-14 md:w-full">
                     <div class="grid grid-rows">
                         <div>
-                    
+
                             <b>{{ t("Get our input") }}</b>
                         </div>
-                        <div> 
+                        <div>
                             <p>{{ t("Invite us to your inception, design, progress or analysis meetings.") }}</p></div>
                         </div>
                  </div>
@@ -41,11 +41,11 @@
                     <img src="img/yticon.png" class="md:px-20 2xl:px-24 mr-6 md:mx-auto md:mb-5 w-14 md:w-full">
                     <div class="grid grid-rows">
                         <div>
-                    
+
                             <b>{{ t("Capacity Building") }}</b>
                         </div>
-                        <div> 
-                            <p>{!! t("We also offer online <a href=\"{{ url('capacity-building') }}\">resources and events</a> to support capacity-building.") !!} </p></div>
+                        <div>
+                            <p>{!! t("We also offer online <a href=\":url\">resources and events</a> to support capacity-building.", [':url' => url('capacity-building') ]) !!} </p></div>
                         </div>
                  </div>
 </div>
@@ -77,13 +77,13 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="lg:w-5/6 mx-auto mt-16 px-10">
 
 
 
-        
+
 
         <h3 id="getintouch">{{ t("Get in touch") }}</h3>
             <div class="divider"></div>
@@ -108,7 +108,7 @@
                     <a href="mailto:lucie@idems.international">lucie@idems.international</a>
                 </div>
                 <div class=" w-5/6 sm:w-4/6 mx-auto md:mx-3 md:w-3/12 my-5 ">
-                <img src="/img/shiphar1.jpg" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto"> 
+                <img src="/img/shiphar1.jpg" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto">
         <p class="font-bold">Shiphar Mulumba </p>
                     <p>{{ t("East and Southern Africa CoP") }}</p>
                     <p>{{ t("English and Swahili") }}</p>
@@ -124,7 +124,7 @@
 
             <livewire:contact-form></livewire:contact-form>
 
-           
+
         </div>
     </div>
 
