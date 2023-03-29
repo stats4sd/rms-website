@@ -29,11 +29,12 @@ class ContactForm extends Component implements HasForms
     protected function getFormSchema(): array
     {
         return [
-            TextInput::make('name'),
+            TextInput::make('name')->label(t("Name")),
             TextInput::make('email')
                 ->email()
-                ->required(),
-            Textarea::make('message'),
+                ->required()
+                ->label(t("Email")),
+            Textarea::make('message')->label(t("Message")),
         ];
     }
 
@@ -44,8 +45,8 @@ class ContactForm extends Component implements HasForms
         $this->data = [];
 
         Notification::make()
-            ->title('Thank you for your message')
-            ->body('Your message has been sent to our RMS support team. You will receive an automated confirmation via email, and one of our team will reply as soon as possible.')
+            ->title(t("Thank you for your message"))
+            ->body(t("Your message has been sent to our RMS support team. You will receive an automated confirmation via email, and one of our team will reply as soon as possible."))
             ->duration(10000)
             ->success()
             ->send();

@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>RMS for CCRP</title>
+    <title>{{ t("RMS for CCRP") }}</title>
 
      <style>[x-cloak] { display: none !important; }</style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -19,8 +19,8 @@
 </head>
 <body data-theme="lemonade" class="">
 
-<div class="navbar bg-base-100">
-    <div class="navbar-start">
+<div class="w-100 flex justify-between bg-base-100 py-3">
+    <div class="">
         {{-- Mobile Navigation --}}
         <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@
         </div>
         <a class="btn btn-ghost normal-case text-xl" href="/">RMS</a>
     </div>
-    <div class="navbar-center hidden lg:flex w-3/6 flex-row-reverse mr-20  ">
+    <div class="navbar-center hidden lg:flex flex-row-reverse mr-20  ">
         <x-nav-menu/>
     </div>
 </div>

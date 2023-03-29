@@ -37,7 +37,7 @@
         </p>
         <div class="card">
             <div class="card-body pl-0">
-                <h4>Related Resources</h4>
+                <h4>{{ t("Related Resources") }}</h4>
                 <ul class="pb-4 pl-4 list-disc">
 
                     @foreach($event->eventResources as $resource)
@@ -52,8 +52,9 @@
             <p class="pb-4">
                 {{ ($event->joining_instructions ?? $event->eventType?->joining_instructions) ?? '' }}
             </p>
-            <a href="{{ ($event->registration_url ?? $event->eventType?->registration_url) ?? '' }}">Click here to
-                register</a>
+            <a href="{{ ($event->registration_url ?? $event->eventType?->registration_url) ?? '' }}">
+                {{ t("Click here to register") }}
+            </a>
         @endif
     </div>
 </div>

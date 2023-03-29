@@ -2,8 +2,8 @@
     <div class="top-capacity bg-cover bg-top bg-no-repeat justify-center flex flex-wrap content-end bg-primary">
         <div class=" w-full">
             <div class="text-center">
-                <h1 class="text-white ">Capacity Building</h1>
-                <h2 class="text-white mt-0">Courses and Resources</h2></div>
+                <h1 class="text-white ">{{ t("Capacity Building") }}</h1>
+                <h2 class="text-white mt-0">{{ t("Courses and Resources") }}</h2></div>
         </div>
     </div>
     <div class="container mx-auto ">
@@ -12,16 +12,15 @@
             <p class="px-10 lg:px-0"></p>
 
 
-            <h3>RMS Resources</h3>
+            <h3>{{ t("RMS Resources") }}</h3>
             <div class="divider"></div>
-            <p class="mb-10">Over the last 10 years of supporting CCRP grantees, we have created many different
+            <p class="mb-10">{!! t("Over the last 10 years of supporting CCRP grantees, we have created many different
                 resources, including videos, reference documents, training guides and webinar recordings. You can find
-                these on our <a
-                    href="{{ config('app.resources_site_url') }}/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP">
-                    resources repository</a> on the Stats4SD website.
+                these on our <a href=:href> resources repository</a> on the Stats4SD website.",
+                [':href' => config('app.resources_site_url').'/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP']) !!}
 
             </p>
-            <h4>Featured Resources</h4>
+            <h4>{{ t("Featured Resources") }}</h4>
             <div
                 class="text-left w-full resource-cards  mx-auto flex flex-col lg:flex-row justify-between items-stretch mb-8 mt-10">
 
@@ -32,7 +31,7 @@
                                          alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
                             <div class="card-body  self-end mt-10">
                                 <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
-                                {!! Str::limit($trove->trove_data['description']) !!}
+                                {{ strip_tags(Str::limit($trove->trove_data['description'])) }}
 
                             </div>
                             <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
@@ -65,17 +64,17 @@
 
 
             <a href="{{ config('app.resources_site_url')}}/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP">
-                <button class="btn-primary block mx-auto">View all RMS Resources</button>
+                <button class="btn-primary block mx-auto">{{ t("View all RMS Resources") }}</button>
             </a>
 
             <div class="grid-cols-1 lg:flex lg:flex-row  lg:justify-between items-center my-10 ">
 
                 <div class="lg:mx-8 lg:pr-5 mx-auto pt-5 lg:pt-0">
-                    <h4 class=" my-4">Youtube Channel</h4>
-                    Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful
-                    walkthroughs, and reflections on the research process.
+                    <h4 class=" my-4">{{ t("Youtube Channel") }}</h4>
+                    {{ t("Visit the Stats4SD YouTube channel to find guides to statistical concepts and software, useful
+                    walkthroughs, and reflections on the research process.") }}
                     <a href="https://www.youtube.com/@Stats4SD">
-                        <button class="btn-primary block mx-auto mb-10">View YouTube Channel</button>
+                        <button class="btn-primary block mx-auto mb-10">{{ t("View YouTube Channel") }}</button>
                     </a>
 
                 </div>
@@ -88,16 +87,16 @@
             </div>
 
 
-            <h3>Courses and workshops</h3>
+            <h3>{{ t("Courses and workshops") }}</h3>
             <div class="divider"></div>
 
-            <p class="mb-10">RMS frequently organises workshops, seminars and training events. The majority of these are
-                held online, usually with live translation between English, French and Spanish available. Our <a
-                    href="{{ url('events') }}">events page</a> contains details and links to register for upcoming
-                events.
+            <p class="mb-10">{!! t( "RMS frequently organises workshops, seminars and training events. The majority of these are
+                held online, usually with live translation between English, French and Spanish available. Our
+                <a href=:href> events page</a> contains details and links to register for upcoming events.",
+                [':href' => 'events']) !!}
             </p>
             <a href="{{ url('events') }}">
-                <button class="btn-primary block mx-auto">See upcoming events</button>
+                <button class="btn-primary block mx-auto">{{ t("See upcoming events") }}</button>
             </a>
             <!--
             <p class="mt-10 mb-5">Along with other one-off events, we are also running two series of regular webinars in 2023:
