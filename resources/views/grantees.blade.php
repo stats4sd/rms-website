@@ -65,7 +65,7 @@
                             <p class="font-bold mt-6">{{ t("At all levels: ") }} </p>
                             <p>{{ t("From providing individual project support and developing students’ research skills to working with the leadership team to help develop the program’s long-term strategies. ") }}</p>
                             <p class="font-bold mt-5">{{ t("In multiple languages: ") }}</p>
-                            <p>{{ t("English, Spanish, French and Swahili. ") }}</p>
+                            <p>{{ t("English, Spanish and French. ") }}</p>
                             <p class="font-bold mt-5">{{ t("Across all CCRP regions: ") }}</p>
                             <p>{{ t("East & Southern Africa, West Africa and the Andes. ") }}</p>
                             <p class="font-bold mt-5">{{ t("Advocating mixed methods:") }}</p>
@@ -87,7 +87,7 @@
 
         <h3 id="getintouch">{{ t("Get in touch") }}</h3>
             <div class="divider"></div>
-            <p > {{ t("Our team has three regional coordinators that form part of the CCRP Regional team.
+            <p > {{ t("Our team has three regional coordinators.
                 If you would like any support with your own research at any time, please contact the relevant
                 coordinator for your region. They are:") }}
             </p>
@@ -111,7 +111,7 @@
                 <img src="/img/shiphar1.jpg" class="w-3/5 md:w-full xl:w-5/8 mb-5 mx-auto">
         <p class="font-bold">Shiphar Mulumba </p>
                     <p>{{ t("East and Southern Africa CoP") }}</p>
-                    <p>{{ t("English and Swahili") }}</p>
+                    <p>{{ t("English") }}</p>
                     <a href="mailto:m.shiphar@stats4sd.org" >m.shiphar@stats4sd.org</a>
                 </div>
 
