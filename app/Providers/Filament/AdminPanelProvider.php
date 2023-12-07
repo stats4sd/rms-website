@@ -26,9 +26,11 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->darkMode(false)
             ->id('filament')
             ->path('filament')
             ->login()
+            ->authGuard('web')
             ->colors([
                 'primary' => Color::Amber,
             ])

@@ -22,7 +22,7 @@ return [
 
     'routes' => [
         // The route to redirect to after a successful login
-        'home' => 'filament.admin.pages.dashboard',
+        'home' => 'backpack.dashboard',
     ],
 
     'models' => [
