@@ -14,7 +14,7 @@
 
     @filamentStyles
     {{ $scripts ?? ''}}
-    $filamentScripts
+    @filamentScripts
 
 </head>
 <body data-theme="lemonade" class="">
