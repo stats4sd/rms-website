@@ -1,13 +1,16 @@
 const colors = require('tailwindcss/colors')
+import preset from './vendor/filament/support/tailwind.config.preset'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'none',
     content: [
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
         './resources/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
+        "./vendor/chrisreedio/socialment/resources/**/*.blade.php",
     ],
     theme: {
         extend: {
@@ -49,6 +52,7 @@ module.exports = {
         require('daisyui'),
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
+        preset
     ],
     daisyui: {
         styled: true,

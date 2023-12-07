@@ -12,9 +12,9 @@
      <style>[x-cloak] { display: none !important; }</style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    @livewireStyles
-    @livewireScripts
+    @filamentStyles
     {{ $scripts ?? ''}}
+    $filamentScripts
 
 </head>
 <body data-theme="lemonade" class="">
