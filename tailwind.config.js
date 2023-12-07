@@ -10,6 +10,7 @@ module.exports = {
         './resources/**/*.vue',
         './resources/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
+        "./vendor/chrisreedio/socialment/resources/**/*.blade.php",
     ],
     theme: {
         extend: {

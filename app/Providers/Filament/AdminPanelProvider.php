@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use ChrisReedIO\Socialment\SocialmentPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -25,8 +26,8 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('admin')
-            ->path('admin')
+            ->id('filament')
+            ->path('filament')
             ->login()
             ->colors([
                 'primary' => Color::Amber,
@@ -54,6 +55,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->plugins([
+                SocialmentPlugin::make(),
             ]);
     }
 }
