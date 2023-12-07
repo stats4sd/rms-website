@@ -27,15 +27,17 @@ class ContactForm extends Component implements HasForms
         $this->form->fill();
     }
 
-    protected function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form->schema([
-            TextInput::make('name')->label(t("Name")),
+            TextInput::make('name')->label(t("Name"))
+            ->required(),
             TextInput::make('email')
                 ->email()
                 ->required()
                 ->label(t("Email")),
-            Textarea::make('message')->label(t("Message")),
+            Textarea::make('message')->label(t("Message"))
+            ->required(),
         ])->statePath('data')
             ->columns(1);
     }
