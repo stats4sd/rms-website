@@ -36,4 +36,16 @@ Route::group([
 
     Route::get('event_types/{eventtype}/joining-instructions', [EventTypeController::class, 'getJoiningInstructions']);
 
-}); // this should be the absolute last line of this file
+});
+
+
+// Override the login route. We now use the Filament login thanks to the quick-setup of the socialment package to allow login with Azure AD
+Route::group([
+    'namespace' => 'Backpack\CRUD\app\Http\Controllers',
+    'middleware' => config('backpack.base.web_middleware', 'web'),
+    'prefix' => config('backpack.base.route_prefix'),
+], function () {
+    Route::get('login', function() {
+        return redirect ('/filament/login');
+    })->name('backpack.auth.login');
+});

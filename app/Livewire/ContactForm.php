@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use App\Models\SupportRequest;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Livewire\Component;
 
@@ -14,35 +15,38 @@ class ContactForm extends Component implements HasForms
 {
     use InteractsWithForms;
 
-    public $data;
+    public ?array $data = [];
 
     public function render()
     {
         return view('livewire.contact-form');
     }
 
-    public function getFormStatePath()
+    public function mount(): void
     {
-        return 'data';
+        $this->form->fill();
     }
 
-    protected function getFormSchema(): array
+    public function form(Form $form): Form
     {
-        return [
-            TextInput::make('name')->label(t("Name")),
+        return $form->schema([
+            TextInput::make('name')->label(t("Name"))
+            ->required(),
             TextInput::make('email')
                 ->email()
                 ->required()
                 ->label(t("Email")),
-            Textarea::make('message')->label(t("Message")),
-        ];
+            Textarea::make('message')->label(t("Message"))
+            ->required(),
+        ])->statePath('data')
+            ->columns(1);
     }
 
     public function submit()
     {
         SupportRequest::create($this->form->getState());
 
-        $this->data = [];
+        $this->form->fill();
 
         Notification::make()
             ->title(t("Thank you for your message"))

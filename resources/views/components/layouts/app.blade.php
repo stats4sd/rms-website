@@ -12,12 +12,13 @@
      <style>[x-cloak] { display: none !important; }</style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    @livewireStyles
-    @livewireScripts
+    @filamentStyles
     {{ $scripts ?? ''}}
 
 </head>
 <body data-theme="lemonade" class="">
+@filamentScripts
+@livewire('notifications')
 
 <div class="w-100 flex justify-between bg-base-100 py-3">
     <div class="">
@@ -42,7 +43,6 @@
 <div class="content-center  w-screen pb-20">
     {{ $slot }}
 
-    @livewire('notifications')
 </div>
 
 
