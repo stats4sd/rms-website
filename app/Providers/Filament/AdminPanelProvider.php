@@ -2,11 +2,14 @@
 
 namespace App\Providers\Filament;
 
+use ChrisReedIO\Socialment\Models\ConnectedAccount;
+use ChrisReedIO\Socialment\Socialment;
 use ChrisReedIO\Socialment\SocialmentPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Navigation\NavigationGroup;
+use Filament\Notifications\Notification;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -18,7 +21,11 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use function RectorPrefix202308\Symfony\Component\DependencyInjection\Loader\Configurator\param;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -61,5 +68,32 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 SocialmentPlugin::make(),
             ]);
+    }
+
+
+    public function boot(): void
+    {
+
+
+        \ChrisReedIO\Socialment\Facades\Socialment::postLogin(function (ConnectedAccount $connectedAccount) {
+
+            if(! Str::contains($connectedAccount->email, '@stats4sd.org' ) ) {
+                Auth::logout();
+
+                Notification::make()
+                    ->title('Login Error')
+                    ->body('You must use a stats4sd.org email address to login.')
+                    ->danger()
+                    ->send();
+
+                return redirect('/filament/login');
+            }
+
+            // Handle custom post login logic here.
+            Log::info('User logged in with ' . $connectedAccount->provider . ' account', [
+                'connectedAccount' => $connectedAccount,
+            ]);
+        });
+
     }
 }
