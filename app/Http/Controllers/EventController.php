@@ -13,7 +13,7 @@ class EventController
     {
         return view('events', [
             'events' => Event::where('start', '>', (new Carbon)->toDateString())->get(),
-            'pastEvents' => Event::where('start', '<', (new Carbon)->toDateString())->get(),
+            'pastEvents' => Event::where('start', '<', (new Carbon)->toDateString())->orderByDesc('start')->get(),
         ]);
     }
 
