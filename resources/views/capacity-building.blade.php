@@ -14,7 +14,7 @@
 
             <h3>{{ t("RMS Resources") }}</h3>
             <div class="divider"></div>
-            <p class="mb-10">{!! t("Over the last 10 years of supporting CCRP grantees, we have created many different
+            <p class="mb-10">{!! t("Over the last 10 years of supporting CRFS grantees, we have created many different
                 resources, including videos, reference documents, training guides and webinar recordings. You can find
                 these on our <a href=:href> resources repository</a> on the Stats4SD website.",
                 [':href' => config('app.resources_site_url').'/resources?refinementList%5Baudiences.name.en%5D%5B0%5D=CCRP']) !!}

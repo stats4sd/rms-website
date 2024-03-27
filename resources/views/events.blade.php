@@ -18,7 +18,7 @@
 
         <div class="lg:w-5/6 mx-auto mt-16 sm:px-10 sm:px-0">
 
-        {{ t("We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in
+        {{ t("We run a series of events throughout the year, where any CRFS grantees are welcome. We are also involved in
             many of the events run by the other cross-cutting and regional teams.") }}
 
             <h3>{{ t("Upcoming Events") }}</h3>

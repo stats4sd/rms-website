@@ -50,10 +50,10 @@ msgstr "Ressources RMS"
 
 #: resources\views\capacity-building.blade.php:17
 msgid ""
-"Over the last 10 years of supporting CCRP grantees, we have created many different\r\n"
+"Over the last 10 years of supporting CRFS grantees, we have created many different\r\n"
 "                resources, including videos, reference documents, training guides and webinar recordings. You can find\r\n"
 "                these on our <a href=:href> resources repository</a> on the Stats4SD website."
-msgstr "Au cours des 10 dernières années de soutien aux bénéficiaires du CCRP, nous avons créé de nombreuses ressources différentes, notamment des vidéos, des documents de référence, des guides de formation et des enregistrements de webinaires. Vous pouvez les trouver sur notre <a href=:href>référentiel de ressources</a> sur le site Web Stats4SD."
+msgstr "Au cours des 10 dernières années de soutien aux bénéficiaires du CRFS, nous avons créé de nombreuses ressources différentes, notamment des vidéos, des documents de référence, des guides de formation et des enregistrements de webinaires. Vous pouvez les trouver sur notre <a href=:href>référentiel de ressources</a> sur le site Web Stats4SD."
 
 #: resources\views\capacity-building.blade.php:24
 msgid "Featured Resources"
@@ -97,8 +97,8 @@ msgid "Related Resources"
 msgstr "Ressources associées"
 
 #: resources\views\components\layouts\app.blade.php:10
-msgid "RMS for CCRP"
-msgstr "RMS pour CCRP"
+msgid "RMS for CRFS"
+msgstr "RMS pour CRFS"
 
 #: resources\views\components\nav-menu.blade.php:2
 msgid "Home"
@@ -163,9 +163,9 @@ msgstr "Webinaires, ateliers et plus"
 
 #: resources\views\events.blade.php:21
 msgid ""
-"We run a series of events throughout the year, where any CCRP grantees are welcome. We are also involved in\r\n"
+"We run a series of events throughout the year, where any CRFS grantees are welcome. We are also involved in\r\n"
 "            many of the events run by the other cross-cutting and regional teams."
-msgstr "Nous organisons une série d'événements tout au long de l'année, où tous les bénéficiaires du CCRP sont les bienvenus. Nous sommes également impliqués dans de nombreux événements organisés par les autres équipes transversales et régionales."
+msgstr "Nous organisons une série d'événements tout au long de l'année, où tous les bénéficiaires du CRFS sont les bienvenus. Nous sommes également impliqués dans de nombreux événements organisés par les autres équipes transversales et régionales."
 
 #: resources\views\events.blade.php:25
 msgid "Upcoming Events"
@@ -176,8 +176,8 @@ msgid "Past Events"
 msgstr "Événements passés"
 
 #: resources\views\grantees.blade.php:13
-msgid "RMS is constantly looking for opportunities to work with our partners at CCRP to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”"
-msgstr "RMS est constamment à la recherche d'opportunités de travailler avec nos partenaires du CCRP pour remplir la mission du programme \"<i>assurer un monde où tous ont accès à des aliments nutritifs produits de manière durable par les populations locales</i>\"."
+msgid "RMS is constantly looking for opportunities to work with our partners at CRFS to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”"
+msgstr "RMS est constamment à la recherche d'opportunités de travailler avec nos partenaires du CRFS pour remplir la mission du programme \"<i>assurer un monde où tous ont accès à des aliments nutritifs produits de manière durable par les populations locales</i>\"."
 
 #: resources\views\grantees.blade.php:15
 msgid "How can we help?"
@@ -228,8 +228,8 @@ msgid "English, Spanish, French and Swahili. "
 msgstr "Anglais, espagnol, français et swahili."
 
 #: resources\views\grantees.blade.php:69
-msgid "Across all CCRP regions: "
-msgstr "Dans toutes les régions du CCRP :"
+msgid "Across all CRFS regions: "
+msgstr "Dans toutes les régions du CRFS :"
 
 #: resources\views\grantees.blade.php:70
 msgid "East & Southern Africa, West Africa and the Andes. "
@@ -249,10 +249,10 @@ msgstr "Entrer en contact"
 
 #: resources\views\grantees.blade.php:90
 msgid ""
-"Our team has three regional coordinators that form part of the CCRP Regional team.\r\n"
+"Our team has three regional coordinators that form part of the CRFS Regional team.\r\n"
 "                If you would like any support with your own research at any time, please contact the relevant\r\n"
 "                coordinator for your region. They are:"
-msgstr "Notre équipe compte trois coordonnateurs régionaux qui font partie de l'équipe régionale du CCRP. Si vous souhaitez un soutien pour vos propres recherches à tout moment, veuillez contacter le coordinateur compétent pour votre région. Ils sont:"
+msgstr "Notre équipe compte trois coordonnateurs régionaux qui font partie de l'équipe régionale du CRFS. Si vous souhaitez un soutien pour vos propres recherches à tout moment, veuillez contacter le coordinateur compétent pour votre région. Ils sont:"
 
 #: resources\views\grantees.blade.php:100
 msgid "Andes CoP"
@@ -293,12 +293,12 @@ msgid "Research Methods Support for Agroecology"
 msgstr "Appui aux méthodes de recherche pour l'agroécologie"
 
 #: resources\views\home.blade.php:7
-msgid "A CCRP cross-cutting project"
-msgstr "Un projet transversal du CCRP"
+msgid "A CRFS cross-cutting project"
+msgstr "Un projet transversal du CRFS"
 
 #: resources\views\home.blade.php:19
-msgid "Are you a CCRP Grantee in need of Research support? Click here!"
-msgstr "Êtes-vous un bénéficiaire du CCRP et avez-vous besoin d'un soutien à la recherche? Cliquez ici!"
+msgid "Are you a CRFS Grantee in need of Research support? Click here!"
+msgstr "Êtes-vous un bénéficiaire du CRFS et avez-vous besoin d'un soutien à la recherche? Cliquez ici!"
 
 #: resources\views\home.blade.php:29
 msgid "See our growing collection of online resources."
@@ -311,9 +311,9 @@ msgstr "Nous organisons une série de formations et de webinaires tout au long d
 #: resources\views\home.blade.php:100
 msgid ""
 "The Research Methods Support team (RMS) at <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> has been working with the <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Collaborative Crop\r\n"
-"                    Research Programme (CCRP)</a> since 2009, and continues to provide support to its grantees\r\n"
+"                    Research Programme (CRFS)</a> since 2009, and continues to provide support to its grantees\r\n"
 "                throughout the research process:"
-msgstr "L'équipe d'appui aux méthodes de recherche (RMS) de <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> travaille avec le <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Programme de recherche collaborative sur les cultures (CCRP)</a> depuis 2009 et continue de fournir un soutien à ses bénéficiaires tout au long du processus de recherche"
+msgstr "L'équipe d'appui aux méthodes de recherche (RMS) de <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> travaille avec le <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Programme de recherche collaborative sur les cultures (CRFS)</a> depuis 2009 et continue de fournir un soutien à ses bénéficiaires tout au long du processus de recherche"
 
 #: resources\views\home.blade.php:107
 msgid "Research inception, design and planning"
@@ -344,8 +344,8 @@ msgid "Stay in touch"
 msgstr "Reste en contact"
 
 #: resources\views\home.blade.php:130
-msgid "We run mailing lists and WhatsApp groups for the CCRP CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CCRP network. "
-msgstr "Nous gérons des listes de diffusion et des groupes WhatsApp pour les CCRP CdPs. Nous utilisons ces groupes pour partager de nouvelles ressources RMS, des informations sur les événements à venir et des nouvelles générales sur l'ensemble du réseau CCRP."
+msgid "We run mailing lists and WhatsApp groups for the CRFS CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CRFS network. "
+msgstr "Nous gérons des listes de diffusion et des groupes WhatsApp pour les CRFS CdPs. Nous utilisons ces groupes pour partager de nouvelles ressources RMS, des informations sur les événements à venir et des nouvelles générales sur l'ensemble du réseau CRFS."
 
 #: resources\views\home.blade.php:134
 msgid "Subscribe for updates"

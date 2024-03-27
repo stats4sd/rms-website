@@ -10,7 +10,7 @@
 
 
         <div class="lg:w-5/6 mx-auto mt-16 px-10">
-        <p class="headline"> {!! t("RMS is constantly looking for opportunities to work with our partners at CCRP to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”") !!}.
+        <p class="headline"> {!! t("RMS is constantly looking for opportunities to work with our partners at CRFS to fulfil the programme’s mission “<i>to ensure a world where all have access to nutritious food that is sustainably produced by local people</i>”") !!}.
 </p>
         <h3>{{ t("How can we help?") }}</h3>
             <div class="divider mb-10"></div>
@@ -66,7 +66,7 @@
                             <p>{{ t("From providing individual project support and developing students’ research skills to working with the leadership team to help develop the program’s long-term strategies. ") }}</p>
                             <p class="font-bold mt-5">{{ t("In multiple languages: ") }}</p>
                             <p>{{ t("English, Spanish and French. ") }}</p>
-                            <p class="font-bold mt-5">{{ t("Across all CCRP regions: ") }}</p>
+                            <p class="font-bold mt-5">{{ t("Across all CRFS regions: ") }}</p>
                             <p>{{ t("East & Southern Africa, West Africa and the Andes. ") }}</p>
                             <p class="font-bold mt-5">{{ t("Advocating mixed methods:") }}</p>
                             <p>{{ t("Our team includes research design specialists, statisticians, qualitative researchers and data engineers.") }} </p>
