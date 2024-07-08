@@ -24,6 +24,7 @@
         "@fullcalendar/daygrid": "^6.0.3",
         "@fullcalendar/list": "^6.0.3",
         "@fullcalendar/timegrid": "^6.0.3",
+        "@sentry/vue": "^7.40.0",
         "daisyui": "^2.47.0"
     }
 }
