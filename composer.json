@@ -15,6 +15,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
+        "laravel/telescope": "^5.1",
         "laravel/tinker": "^2.7",
         "orangehill/iseed": "^3.0",
         "sentry/sentry-laravel": "^4.6",
