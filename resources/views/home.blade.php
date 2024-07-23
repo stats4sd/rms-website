@@ -4,7 +4,7 @@
         <div class=" w-full">
             <div class="text-center ">
                 <h1 class="text-white ">{{ t("Research Methods Support for Agroecology") }}</h1>
-                <h2 class="text-white mt-0">{{ t("A CCRP cross-cutting project") }}</h2>
+                <h2 class="text-white mt-0">{{ t("A CRFS cross-cutting project") }}</h2>
             </div>
         </div>
     </div>
@@ -14,17 +14,17 @@
             class="text-left w-full resource-cards callboxes mx-auto flex flex-col lg:flex-row justify-center items-stretch mb-8 mt-10">
 
             <div class="card h-80 lg:h-110 lg:w-80 bg-base-100 shadow-xl image-full mx-7 mb-5 ">
-                <figure><img src="/img/helpbox.jpg" class="min-h-full"/></figure>
+                <figure><img src="/img/helpboxsm.jpg" class="min-h-full"/></figure>
                 <div class="card-body  self-end mt-10">
                     <h3 class="flex items-end">{{ t("Help for Grantees") }}</h3>
-                    <p>{{ t("Are you a CCRP Grantee in need of Research support? Click here!") }}</p>
+                    <p>{{ t("Are you a CRFS Grantee in need of Research support? Click here!") }}</p>
 
                 </div>
                 <a class="block absolute h-full w-full top-0 z-50 rounded-2xl hover:bg-black hover:opacity-20"
                    href="{{ url('grantees') }}"> </a>
             </div>
             <div class="card h-80 lg:h-110 lg:w-80 bg-base-100 shadow-xl image-full mx-7 mb-5 ">
-                <figure><img src="/img/capacitybox.jpg" class="min-h-full"/></figure>
+                <figure><img src="/img/capacityboxsm.jpg" class="min-h-full"/></figure>
                 <div class="card-body  self-end mt-10">
                     <h3 class="flex items-end">{{ t("Capacity Building") }}</h3>
                     <p>{{ t("See our growing collection of online resources.") }}</p>
@@ -34,7 +34,7 @@
                    href="{{ url('capacity-building') }}"> </a>
             </div>
             <div class="card h-80 lg:h-110 lg:w-80 bg-base-100 shadow-xl image-full mx-7 mb-5 ">
-                <figure><img src="/img/eventsbox.jpg" class="min-h-full"/></figure>
+                <figure><img src="/img/eventsboxsm.jpg" class="min-h-full"/></figure>
                 <div class="card-body  self-end mt-10">
                     <h3 class="flex items-end">{{ t("Events") }}</h3>
                     <p>{{ t("We run a series of training courses and webinars throughout the year.") }}</p>
@@ -48,8 +48,7 @@
 
 
     <div class="w-4/6 mx-auto">
-        <p class="headline"> {!! t("The Research Methods Support team (RMS) at <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> has been working with the <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Collaborative Crop
-                    Research Programme (CCRP)</a> since 2009, and continues to provide support to its grantees
+        <p class="headline"> {!! t("The Research Methods Support team (RMS) at <a href=\"https://stats4sd.org\">Statistics for Sustainable Development</a> has been working with the <a href=\"https://www.ccrp.org/\"  target=\"_blank\">Global Collaboration for Resilient Food Systems (CRFS)</a> since 2009, and continues to provide support to its grantees
                 throughout the research process:") !!}</p>
     </div>
     <div class="container mx-auto w-4/6 2xl:w-7/12 sm:text-center grid sm:grid-cols-11 ">
@@ -81,7 +80,7 @@
             <img src="img/leaficon1.png"
                  class="md:px-20 lg:px-14 xl:px-16 2xl:px-20 sm:px-16 w-14 sm:w-full mr-6 sm:mx-auto sm:mb-5">
             <p>
-                <b>{{ t("Focus on research for agroecology.") }}</b> {{ t("Systems, transdisciplinarity, and action research") }}
+               {{ t("Focus on research for agroecology.") }} {{ t("Systems, transdisciplinarity, and action research") }}
             </p>
         </div>
 
@@ -89,7 +88,7 @@
     <div class="w-4/6 mx-auto">
         <h3>{{ t("Stay in touch") }}</h3>
         <div class="divider"></div>
-        <p>{{ t("We run mailing lists and WhatsApp groups for the CCRP CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CCRP network. ") }}
+        <p>{{ t("We run mailing lists and WhatsApp groups for the CRFS CoPs. We use these groups to share new RMS resources, information on upcoming events, and general news from across the CRFS network. ") }}
         </p>
 
         <a href="{{ \App\Models\EventType::first()?->registration_url ?? 'https://docs.google.com/forms/d/e/1FAIpQLSf8EJo3hGbqXouYelFJxVOHFnT1jxC-lclMLJfHPsN8yz8sIA/viewform?usp=sf_link'}}">
@@ -104,7 +103,7 @@
     <div class="text-center w-full flex flex-col sm:flex-row justify-around items-center mt-24 pb-8">
         <a href="https://stats4sd.org"><img class="mt-4 h-6" src="img/stats4sdlogo.png"></a>
         <a href="https://idems.international"><img class="mt-4 h-8" src="img/idemslogo.png"></a>
-        <a href="https://www.ccrp.org/"><img class="mt-4 h-9" src="img/ccrplogo1.png"></a>
+        <a href="https://www.ccrp.org/"><img class="mt-4 h-10" src="img/CRFSlogo.svg"></a>
         <a href="https://www.mcknight.org/"><img class="mt-4 h-7" src="img/mcknightlogo.png"></a>
     </div>
     </div>
