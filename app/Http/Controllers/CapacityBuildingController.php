@@ -11,8 +11,7 @@ class CapacityBuildingController extends Controller
 {
     public function index()
     {
-        $featuredTroves = FeaturedTrove::with('trove')
-            ->where('locale', app()->getLocale())
+        $featuredTroves = FeaturedTrove::where('locale', app()->getLocale())
             ->get();
 
 
