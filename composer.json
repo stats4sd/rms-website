@@ -7,8 +7,8 @@
     "require": {
         "php": "^8.0.2",
         "backpack/crud": "^5.4",
-        "backpack/editable-columns": "^2.1",
-        "backpack/pro": "^1.6",
+        "backpack/editable-columns": "2.1.5",
+        "backpack/pro": "1.6.6",
         "chrisreedio/socialment": "^3.4",
         "dcblogdev/laravel-microsoft-graph": "^3.1",
         "filament/filament": "^3.0-stable",
@@ -17,6 +17,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/telescope": "^5.1",
         "laravel/tinker": "^2.7",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "orangehill/iseed": "^3.0",
         "sentry/sentry-laravel": "^4.6",
         "socialiteproviders/microsoft-azure": "^5.1",
