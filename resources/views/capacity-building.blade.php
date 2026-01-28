@@ -27,10 +27,13 @@
                 @foreach($featuredTroves as $trove)
                     @if($trove->trove_data)
                         <div class="card lg:w-96 bg-base-100 shadow-xl image-full mx-3 mb-5 ">
-                            <figure><img src="{{ Storage::disk('public')->url($trove->cover_image) }}"
-                                         alt="{{ $trove->trove_data['title'] }} . 'cover image'" class=""/></figure>
-                            <div class="card-body  self-end mt-10">
-                                <h3 class="card-title">{{ $trove->trove_data['title'] }}</h3>
+                            <figure><img
+                                    src="{{ $trove->cover_image_url ?? Storage::disk('public')->url($trove->cover_image) }}"
+                                     alt="{{ $trove->trove_data['title'] }} . 'cover image'"
+                                    style="object-position: top left;"
+                                /></figure>
+                            <div class="card-body self-end mt-10">
+                                <h3 class="card-title mt-0 pt-0">{{ $trove->trove_data['title'] }}</h3>
                                 {{ strip_tags(Str::limit($trove->trove_data['description'])) }}
 
                             </div>
